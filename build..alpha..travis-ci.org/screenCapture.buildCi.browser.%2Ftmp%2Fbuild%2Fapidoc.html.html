@@ -1,0 +1,4796 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/systemjs/builder">systemjs-builder (v0.16.4)</a>
+</h1>
+<h4>SystemJS Build Tool</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.systemjs-builder">module systemjs-builder</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.systemjs-builder">
+            function <span class="apidocSignatureSpan"></span>systemjs-builder
+            <span class="apidocSignatureSpan">(baseURL, cfg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.builder">
+            function <span class="apidocSignatureSpan">systemjs-builder.</span>builder
+            <span class="apidocSignatureSpan">(baseURL, cfg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.trace">
+            function <span class="apidocSignatureSpan">systemjs-builder.</span>trace
+            <span class="apidocSignatureSpan">(loader, traceCache)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">systemjs-builder.</span>amd</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">systemjs-builder.</span>arithmetic</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">systemjs-builder.</span>builder.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">systemjs-builder.</span>cjs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">systemjs-builder.</span>compile</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">systemjs-builder.</span>compiler</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">systemjs-builder.</span>esm</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">systemjs-builder.</span>global</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">systemjs-builder.</span>json</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">systemjs-builder.</span>output</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">systemjs-builder.</span>register</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">systemjs-builder.</span>sourcemaps</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">systemjs-builder.</span>trace.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">systemjs-builder.</span>utils</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.systemjs-builder.amd">module systemjs-builder.amd</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.amd.attach">
+            function <span class="apidocSignatureSpan">systemjs-builder.amd.</span>attach
+            <span class="apidocSignatureSpan">(loader)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.amd.compile">
+            function <span class="apidocSignatureSpan">systemjs-builder.amd.</span>compile
+            <span class="apidocSignatureSpan">(load, opts, loader)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.systemjs-builder.arithmetic">module systemjs-builder.arithmetic</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.arithmetic.addTrees">
+            function <span class="apidocSignatureSpan">systemjs-builder.arithmetic.</span>addTrees
+            <span class="apidocSignatureSpan">(tree1, tree2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.arithmetic.intersectTrees">
+            function <span class="apidocSignatureSpan">systemjs-builder.arithmetic.</span>intersectTrees
+            <span class="apidocSignatureSpan">(tree1, tree2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.arithmetic.subtractTrees">
+            function <span class="apidocSignatureSpan">systemjs-builder.arithmetic.</span>subtractTrees
+            <span class="apidocSignatureSpan">(tree1, tree2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.arithmetic.traceExpression">
+            function <span class="apidocSignatureSpan">systemjs-builder.arithmetic.</span>traceExpression
+            <span class="apidocSignatureSpan">(builder, expression, traceOpts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.arithmetic.traverseTree">
+            function <span class="apidocSignatureSpan">systemjs-builder.arithmetic.</span>traverseTree
+            <span class="apidocSignatureSpan">(tree, moduleName, visitor, traceOpts, reversePost, parent, seen)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.systemjs-builder.builder">module systemjs-builder.builder</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.builder.builder">
+            function <span class="apidocSignatureSpan">systemjs-builder.</span>builder
+            <span class="apidocSignatureSpan">(baseURL, cfg)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.systemjs-builder.builder.prototype">module systemjs-builder.builder.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.builder.prototype.addTrees">
+            function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>addTrees
+            <span class="apidocSignatureSpan">(tree1, tree2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.builder.prototype.build">
+            function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>build
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.builder.prototype.buildSFX">
+            function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>buildSFX
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.builder.prototype.buildStatic">
+            function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>buildStatic
+            <span class="apidocSignatureSpan">(expressionOrTree, outFile, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.builder.prototype.buildTree">
+            function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>buildTree
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.builder.prototype.bundle">
+            function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>bundle
+            <span class="apidocSignatureSpan">(expressionOrTree, outFile, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.builder.prototype.clearCache">
+            function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>clearCache
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.builder.prototype.compile">
+            function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>compile
+            <span class="apidocSignatureSpan">(moduleNameOrLoad, outFile, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.builder.prototype.config">
+            function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>config
+            <span class="apidocSignatureSpan">(config, saveForReset, ignoreBaseURL)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.builder.prototype.getCache">
+            function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>getCache
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.builder.prototype.getDeferredImports">
+            function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>getDeferredImports
+            <span class="apidocSignatureSpan">(tree)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.builder.prototype.getDepCache">
+            function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>getDepCache
+            <span class="apidocSignatureSpan">(tree)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.builder.prototype.intersectTrees">
+            function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>intersectTrees
+            <span class="apidocSignatureSpan">(tree1, tree2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.builder.prototype.invalidate">
+            function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>invalidate
+            <span class="apidocSignatureSpan">(invalidationModuleName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.builder.prototype.loadConfig">
+            function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>loadConfig
+            <span class="apidocSignatureSpan">(configFile, saveForReset, ignoreBaseURL)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.builder.prototype.loadConfigSync">
+            function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>loadConfigSync
+            <span class="apidocSignatureSpan">(configFile, saveForReset, ignoreBaseURL)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.builder.prototype.reset">
+            function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>reset
+            <span class="apidocSignatureSpan">(baseLoader)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.builder.prototype.setCache">
+            function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>setCache
+            <span class="apidocSignatureSpan">(cacheObj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.builder.prototype.subtractTrees">
+            function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>subtractTrees
+            <span class="apidocSignatureSpan">(tree1, tree2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.builder.prototype.trace">
+            function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>trace
+            <span class="apidocSignatureSpan">(expression, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.builder.prototype.traceConditionalEnv">
+            function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>traceConditionalEnv
+            <span class="apidocSignatureSpan">(expression, opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.systemjs-builder.cjs">module systemjs-builder.cjs</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.cjs.compile">
+            function <span class="apidocSignatureSpan">systemjs-builder.cjs.</span>compile
+            <span class="apidocSignatureSpan">(load, opts, loader)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.systemjs-builder.compile">module systemjs-builder.compile</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.compile.attachCompilers">
+            function <span class="apidocSignatureSpan">systemjs-builder.compile.</span>attachCompilers
+            <span class="apidocSignatureSpan">(loader)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.compile.compileLoad">
+            function <span class="apidocSignatureSpan">systemjs-builder.compile.</span>compileLoad
+            <span class="apidocSignatureSpan">(loader, load, compileOpts, cache)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.compile.compileTree">
+            function <span class="apidocSignatureSpan">systemjs-builder.compile.</span>compileTree
+            <span class="apidocSignatureSpan">(loader, tree, traceOpts, compileOpts, outputOpts, cache)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.compile.getTreeModulesPostOrder">
+            function <span class="apidocSignatureSpan">systemjs-builder.compile.</span>getTreeModulesPostOrder
+            <span class="apidocSignatureSpan">(tree, traceOpts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.compile.pluginBundleHook">
+            function <span class="apidocSignatureSpan">systemjs-builder.compile.</span>pluginBundleHook
+            <span class="apidocSignatureSpan">(loader, loads, compileOpts, outputOpts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.compile.wrapSFXOutputs">
+            function <span class="apidocSignatureSpan">systemjs-builder.compile.</span>wrapSFXOutputs
+            <span class="apidocSignatureSpan">(loader, tree, modules, outputs, entryPoints, compileOpts, cache)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.systemjs-builder.compiler">module systemjs-builder.compiler</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.compiler.compile">
+            function <span class="apidocSignatureSpan">systemjs-builder.compiler.</span>compile
+            <span class="apidocSignatureSpan">(load, opts, plugin)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.compiler.compileAst">
+            function <span class="apidocSignatureSpan">systemjs-builder.compiler.</span>compileAst
+            <span class="apidocSignatureSpan">(load, plugin)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.systemjs-builder.esm">module systemjs-builder.esm</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.esm.TraceurImportNormalizeTransformer">
+            function <span class="apidocSignatureSpan">systemjs-builder.esm.</span>TraceurImportNormalizeTransformer
+            <span class="apidocSignatureSpan">(map)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.esm.attach">
+            function <span class="apidocSignatureSpan">systemjs-builder.esm.</span>attach
+            <span class="apidocSignatureSpan">(loader)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.esm.compile">
+            function <span class="apidocSignatureSpan">systemjs-builder.esm.</span>compile
+            <span class="apidocSignatureSpan">(load, opts, loader)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.esm.remap">
+            function <span class="apidocSignatureSpan">systemjs-builder.esm.</span>remap
+            <span class="apidocSignatureSpan">(source, map, fileName)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.systemjs-builder.global">module systemjs-builder.global</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.global.compile">
+            function <span class="apidocSignatureSpan">systemjs-builder.global.</span>compile
+            <span class="apidocSignatureSpan">(load, opts, loader)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.global.sfx">
+            function <span class="apidocSignatureSpan">systemjs-builder.global.</span>sfx
+            <span class="apidocSignatureSpan">(loader)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.systemjs-builder.json">module systemjs-builder.json</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.json.compile">
+            function <span class="apidocSignatureSpan">systemjs-builder.json.</span>compile
+            <span class="apidocSignatureSpan">(load, opts, loader)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.systemjs-builder.output">module systemjs-builder.output</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.output.inlineSourceMap">
+            function <span class="apidocSignatureSpan">systemjs-builder.output.</span>inlineSourceMap
+            <span class="apidocSignatureSpan">(source, sourceMap)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.output.writeOutputs">
+            function <span class="apidocSignatureSpan">systemjs-builder.output.</span>writeOutputs
+            <span class="apidocSignatureSpan">(outputs, baseURL, outputOpts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.systemjs-builder.register">module systemjs-builder.register</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.register.compile">
+            function <span class="apidocSignatureSpan">systemjs-builder.register.</span>compile
+            <span class="apidocSignatureSpan">(load, opts, loader)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.systemjs-builder.sourcemaps">module systemjs-builder.sourcemaps</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.sourcemaps.concatenateSourceMaps">
+            function <span class="apidocSignatureSpan">systemjs-builder.sourcemaps.</span>concatenateSourceMaps
+            <span class="apidocSignatureSpan">(outFile, mapsWithOffsets, basePath, sourceMapContents)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.sourcemaps.removeSourceMaps">
+            function <span class="apidocSignatureSpan">systemjs-builder.sourcemaps.</span>removeSourceMaps
+            <span class="apidocSignatureSpan">(source)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.systemjs-builder.trace">module systemjs-builder.trace</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.trace.trace">
+            function <span class="apidocSignatureSpan">systemjs-builder.</span>trace
+            <span class="apidocSignatureSpan">(loader, traceCache)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.trace.getConditionalEnv">
+            function <span class="apidocSignatureSpan">systemjs-builder.trace.</span>getConditionalEnv
+            <span class="apidocSignatureSpan">(builder, loads, traceOpts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.trace.getConditionalResolutions">
+            function <span class="apidocSignatureSpan">systemjs-builder.trace.</span>getConditionalResolutions
+            <span class="apidocSignatureSpan">(conditional, conditionalEnv, inlineConditionals)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.trace.getLoadDependencies">
+            function <span class="apidocSignatureSpan">systemjs-builder.trace.</span>getLoadDependencies
+            <span class="apidocSignatureSpan">(load, traceOpts, canonicalConditionalEnv, canonicalInlineConditionals)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.trace.toCanonicalConditionalEnv">
+            function <span class="apidocSignatureSpan">systemjs-builder.trace.</span>toCanonicalConditionalEnv
+            <span class="apidocSignatureSpan">(loader, conditionalEnv)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.systemjs-builder.trace.prototype">module systemjs-builder.trace.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.trace.prototype.getAllLoadRecords">
+            function <span class="apidocSignatureSpan">systemjs-builder.trace.prototype.</span>getAllLoadRecords
+            <span class="apidocSignatureSpan">(canonical, traceOpts, canonicalConditionalEnv, canonicalInlineConditionals, curLoads, parentStack)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.trace.prototype.getLoadRecord">
+            function <span class="apidocSignatureSpan">systemjs-builder.trace.prototype.</span>getLoadRecord
+            <span class="apidocSignatureSpan">(canonical, traceOpts, parentStack)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.trace.prototype.inlineConditions">
+            function <span class="apidocSignatureSpan">systemjs-builder.trace.prototype.</span>inlineConditions
+            <span class="apidocSignatureSpan">(tree, loader, traceOpts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.trace.prototype.traceCanonical">
+            function <span class="apidocSignatureSpan">systemjs-builder.trace.prototype.</span>traceCanonical
+            <span class="apidocSignatureSpan">(canonical, traceOpts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.trace.prototype.traceModule">
+            function <span class="apidocSignatureSpan">systemjs-builder.trace.prototype.</span>traceModule
+            <span class="apidocSignatureSpan">(moduleName, traceOpts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.systemjs-builder.utils">module systemjs-builder.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.utils.dextend">
+            function <span class="apidocSignatureSpan">systemjs-builder.utils.</span>dextend
+            <span class="apidocSignatureSpan">(a, b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.utils.extend">
+            function <span class="apidocSignatureSpan">systemjs-builder.utils.</span>extend
+            <span class="apidocSignatureSpan">(a, b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.utils.fromFileURL">
+            function <span class="apidocSignatureSpan">systemjs-builder.utils.</span>fromFileURL
+            <span class="apidocSignatureSpan">(url)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.utils.getAlias">
+            function <span class="apidocSignatureSpan">systemjs-builder.utils.</span>getAlias
+            <span class="apidocSignatureSpan">(loader, canonicalName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.utils.getCanonicalName">
+            function <span class="apidocSignatureSpan">systemjs-builder.utils.</span>getCanonicalName
+            <span class="apidocSignatureSpan">(loader, normalized, isPlugin)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.utils.getFormatHint">
+            function <span class="apidocSignatureSpan">systemjs-builder.utils.</span>getFormatHint
+            <span class="apidocSignatureSpan">(compileOpts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.utils.getPackage">
+            function <span class="apidocSignatureSpan">systemjs-builder.utils.</span>getPackage
+            <span class="apidocSignatureSpan">(packages, name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.utils.getPackageConfigPath">
+            function <span class="apidocSignatureSpan">systemjs-builder.utils.</span>getPackageConfigPath
+            <span class="apidocSignatureSpan">(packageConfigPaths, normalized)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.utils.isPackageConfig">
+            function <span class="apidocSignatureSpan">systemjs-builder.utils.</span>isPackageConfig
+            <span class="apidocSignatureSpan">(loader, canonical)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.utils.parseCondition">
+            function <span class="apidocSignatureSpan">systemjs-builder.utils.</span>parseCondition
+            <span class="apidocSignatureSpan">(condition)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.utils.serializeCondition">
+            function <span class="apidocSignatureSpan">systemjs-builder.utils.</span>serializeCondition
+            <span class="apidocSignatureSpan">(conditionObj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.utils.toFileURL">
+            function <span class="apidocSignatureSpan">systemjs-builder.utils.</span>toFileURL
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.utils.traceurGet">
+            function <span class="apidocSignatureSpan">systemjs-builder.utils.</span>traceurGet
+            <span class="apidocSignatureSpan">(module)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.systemjs-builder.utils.verifyTree">
+            function <span class="apidocSignatureSpan">systemjs-builder.utils.</span>verifyTree
+            <span class="apidocSignatureSpan">(tree)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.systemjs-builder" id="apidoc.module.systemjs-builder">module systemjs-builder</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.systemjs-builder" id="apidoc.element.systemjs-builder.systemjs-builder">
+        function <span class="apidocSignatureSpan"></span>systemjs-builder
+        <span class="apidocSignatureSpan">(baseURL, cfg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Builder(baseURL, cfg) {
+  if (typeof baseURL == 'object') {
+    cfg = baseURL;
+    baseURL = null;
+  }
+
+  this.loader = null;
+  this.resetConfig = function() {};
+
+  this.reset();
+
+  if (baseURL)
+    this.config({ baseURL: baseURL });
+
+  // config passed to constructor will
+  // be saved for future .reset() calls
+  if (typeof cfg == 'object')
+    this.config(cfg, true, !!baseURL);
+  else if (typeof cfg == 'string')
+    this.loadConfigSync(cfg, true, !!baseURL);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.builder" id="apidoc.element.systemjs-builder.builder">
+        function <span class="apidocSignatureSpan">systemjs-builder.</span>builder
+        <span class="apidocSignatureSpan">(baseURL, cfg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Builder(baseURL, cfg) {
+  if (typeof baseURL == 'object') {
+    cfg = baseURL;
+    baseURL = null;
+  }
+
+  this.loader = null;
+  this.resetConfig = function() {};
+
+  this.reset();
+
+  if (baseURL)
+    this.config({ baseURL: baseURL });
+
+  // config passed to constructor will
+  // be saved for future .reset() calls
+  if (typeof cfg == 'object')
+    this.config(cfg, true, !!baseURL);
+  else if (typeof cfg == 'string')
+    this.loadConfigSync(cfg, true, !!baseURL);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.trace" id="apidoc.element.systemjs-builder.trace">
+        function <span class="apidocSignatureSpan">systemjs-builder.</span>trace
+        <span class="apidocSignatureSpan">(loader, traceCache)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Trace(loader, traceCache) {
+  // when creating a new trace, we by default invalidate the freshness of the trace cache
+  Object.keys(traceCache).forEach(function(canonical) {
+    var load = traceCache[canonical];
+
+    if (load &amp;&amp; !load.conditional)
+      load.fresh = false;
+  });
+
+
+  this.loader = loader;
+  // stored traced load records
+  this.loads = traceCache || {};
+  // in progress traces
+  this.tracing = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```javascript
+var Builder = require('systemjs-builder');
+
+var builder = new Builder({
+// ...
+});
+
+Promise.all([builder.<span class="apidocCodeKeywordSpan">trace</span>('app/first.js'), builder.trace('app/second.
+js')])
+.then(function(trees) {
+var commonTree = builder.intersectTrees(trees[0], trees[1]);
+return Promise.all([
+  builder.bundle(commonTree, 'shared-bundle.js'),
+  builder.bundle(builder.subtractTrees(trees[0], commonTree), 'first-bundle.js'),
+  builder.bundle(builder.subtractTrees(trees[1], commonTree), 'second-bundle.js')
+]);
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.systemjs-builder.amd" id="apidoc.module.systemjs-builder.amd">module systemjs-builder.amd</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.amd.attach" id="apidoc.element.systemjs-builder.amd.attach">
+        function <span class="apidocSignatureSpan">systemjs-builder.amd.</span>attach
+        <span class="apidocSignatureSpan">(loader)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">attach = function (loader) {
+  var systemInstantiate = loader.instantiate;
+  loader.instantiate = function (load) {
+    var loader = this;
+
+    return systemInstantiate.call(this, load).then(function (result) {
+      if (load.metadata.format == 'amd') {
+
+        if (!load.source) load.source = ' ';
+
+        var output = compiler.compileAst(load, [require('babel-plugin-transform-amd-system-wrapper').default, { filterMode: true
+ }]);
+        load.metadata.ast = output.ast;
+        load.metadata.anonNamed = output.metadata.anonNamed;
+
+        var entry = loader.defined[load.name];
+        entry.deps = dedupe(output.metadata.amdDeps.concat(load.metadata.deps));
+
+        load.metadata.builderExecute = function (require, exports, module) {
+          var removeDefine = loader.get('@@amd-helpers').createDefine(loader);
+
+          // NB source maps, System overwriting skipped here
+          vm.runInThisContext(load.source);
+
+          removeDefine(loader);
+
+          var lastModule = loader.get('@@amd-helpers').lastModule;
+
+          if (!lastModule.anonDefine &amp;&amp; !lastModule.isBundle)
+            throw new TypeError('AMD module ' + load.name + ' did not define');
+
+          if (lastModule.anonDefine)
+            return lastModule.anonDefine.execute.apply(this, arguments);
+
+          lastModule.isBundle = false;
+          lastModule.anonDefine = null;
+        };
+
+        // first, normalize all dependencies
+        var normalizePromises = [];
+        for (var i = 0, l = entry.deps.length; i &lt; l; i++) {
+          normalizePromises.push(Promise.resolve(loader.normalize(entry.deps[i], load.name)));
+        }
+
+        return Promise.all(normalizePromises).then(function (normalizedDeps) {
+          entry.normalizedDeps = normalizedDeps;
+          entry.originalIndices = group(entry.deps);
+
+          return {
+            deps: entry.deps,
+            execute: result.execute
+          };
+        });
+      }
+
+      return result;
+    });
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.amd.compile" id="apidoc.element.systemjs-builder.amd.compile">
+        function <span class="apidocSignatureSpan">systemjs-builder.amd.</span>compile
+        <span class="apidocSignatureSpan">(load, opts, loader)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compile = function (load, opts, loader) {
+  opts.moduleId = !opts.anonymous &amp;&amp; load.name;
+  return compiler.compile(load, opts, [require('babel-plugin-transform-amd-system-wrapper').default, {
+    anonNamed: load.metadata.anonNamed,
+    map: function (dep) {
+      return opts.normalize ? load.depMap[dep] : dep;
+    },
+    systemGlobal: opts.systemGlobal,
+	  deps: load.deps
+  }]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+return { names: names, indices: indices };
+}
+
+// converts anonymous AMDs into named AMD for the module
+exports.compile = function (load, opts, loader) {
+opts.moduleId = !opts.anonymous &amp;&amp; load.name;
+return compiler.<span class="apidocCodeKeywordSpan">compile</span>(load, opts, [require('babel-plugin-transform-amd-system-
+wrapper').default, {
+  anonNamed: load.metadata.anonNamed,
+  map: function (dep) {
+    return opts.normalize ? load.depMap[dep] : dep;
+  },
+  systemGlobal: opts.systemGlobal,
+	  deps: load.deps
+}]);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.systemjs-builder.arithmetic" id="apidoc.module.systemjs-builder.arithmetic">module systemjs-builder.arithmetic</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.arithmetic.addTrees" id="apidoc.element.systemjs-builder.arithmetic.addTrees">
+        function <span class="apidocSignatureSpan">systemjs-builder.arithmetic.</span>addTrees
+        <span class="apidocSignatureSpan">(tree1, tree2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addTrees(tree1, tree2) {
+  verifyTree(tree1);
+  verifyTree(tree2);
+
+  var name;
+  var unionTree = {};
+
+  for (name in tree2)
+    unionTree[name] = tree2[name];
+
+  for (name in tree1)
+    if (!(name in unionTree))
+      unionTree[name] = tree1[name];
+
+  return unionTree;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.arithmetic.intersectTrees" id="apidoc.element.systemjs-builder.arithmetic.intersectTrees">
+        function <span class="apidocSignatureSpan">systemjs-builder.arithmetic.</span>intersectTrees
+        <span class="apidocSignatureSpan">(tree1, tree2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function intersectTrees(tree1, tree2) {
+  verifyTree(tree1);
+  verifyTree(tree2);
+
+  var name;
+  var intersectTree = {};
+
+  var tree1Names = [];
+  for (name in tree1)
+    tree1Names.push(name);
+
+  for (name in tree2) {
+    if (tree1Names.indexOf(name) == -1)
+      continue;
+    // intersect deps layer (load: false) and actual bundle includes separately
+    if (tree1[name] === false &amp;&amp; tree2[name] === false)
+      continue;
+
+    intersectTree[name] = tree1[name] || tree2[name];
+  }
+
+  return intersectTree;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var builder = new Builder({
+  // ...
+});
+
+Promise.all([builder.trace('app/first.js'), builder.trace('app/second.js')])
+.then(function(trees) {
+  var commonTree = builder.<span class="apidocCodeKeywordSpan">intersectTrees</span>(trees[0], trees[1]);
+  return Promise.all([
+    builder.bundle(commonTree, 'shared-bundle.js'),
+    builder.bundle(builder.subtractTrees(trees[0], commonTree), 'first-bundle.js'),
+    builder.bundle(builder.subtractTrees(trees[1], commonTree), 'second-bundle.js')
+  ]);
+});
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.arithmetic.subtractTrees" id="apidoc.element.systemjs-builder.arithmetic.subtractTrees">
+        function <span class="apidocSignatureSpan">systemjs-builder.arithmetic.</span>subtractTrees
+        <span class="apidocSignatureSpan">(tree1, tree2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function subtractTrees(tree1, tree2) {
+  verifyTree(tree1);
+  verifyTree(tree2);
+
+  var name;
+  var subtractTree = {};
+
+  for (name in tree1)
+    subtractTree[name] = tree1[name];
+
+  for (name in tree2) {
+    if (tree2[name] !== false)
+      delete subtractTree[name];
+  }
+
+  return subtractTree;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+
+Promise.all([builder.trace('app/first.js'), builder.trace('app/second.js')])
+.then(function(trees) {
+  var commonTree = builder.intersectTrees(trees[0], trees[1]);
+  return Promise.all([
+    builder.bundle(commonTree, 'shared-bundle.js'),
+    builder.bundle(builder.<span class="apidocCodeKeywordSpan">subtractTrees</span>(trees[0], commonTree), 'first-bundle.js
+'),
+    builder.bundle(builder.subtractTrees(trees[1], commonTree), 'second-bundle.js')
+  ]);
+});
+```
+
+License
+---
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.arithmetic.traceExpression" id="apidoc.element.systemjs-builder.arithmetic.traceExpression">
+        function <span class="apidocSignatureSpan">systemjs-builder.arithmetic.</span>traceExpression
+        <span class="apidocSignatureSpan">(builder, expression, traceOpts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">traceExpression = function (builder, expression, traceOpts) {
+  if (!expression)
+    throw new Error('A module expression must be provided to trace.');
+
+  if (expression instanceof Array) {
+    var tree = {};
+    return Promise.all(expression.map(function(moduleName) {
+      return builder.loader.normalize(moduleName)
+      .then(function(normalized) {
+        var canonical = builder.getCanonicalName(normalized);
+        return builder.tracer.getLoadRecord(canonical, traceOpts)
+        .then(function(load) {
+          tree[canonical] = load;
+        });
+      });
+    }))
+    .then(function() {
+      return tree;
+    });
+  }
+
+  return Promise
+    .resolve(expandAndCanonicalizeExpression(builder, expression))
+    .then(function processExpandedOperations(expandedOperations) {
+      // chain the operations, applying them with the trace of the next module
+      return expandedOperations.reduce(function(p, op) {
+        return p.then(function(curTree) {
+          // tree . module
+          if (op.singleModule)
+            return getTreeModuleOperation(builder, op.operator, traceOpts)(curTree, op.moduleName);
+
+          if (op.operationsTree){
+            return processExpandedOperations(op.operationsTree).then(function(expandedTree){
+              return getTreeOperation(op.operator)(curTree, expandedTree);
+            });
+          }
+          // tree . tree
+          return builder.tracer.traceCanonical(op.moduleName, traceOpts)
+          .then(function(nextTrace) {
+            return getTreeOperation(op.operator)(curTree, nextTrace.tree);
+          });
+        });
+      }, Promise.resolve({}));
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.arithmetic.traverseTree" id="apidoc.element.systemjs-builder.arithmetic.traverseTree">
+        function <span class="apidocSignatureSpan">systemjs-builder.arithmetic.</span>traverseTree
+        <span class="apidocSignatureSpan">(tree, moduleName, visitor, traceOpts, reversePost, parent, seen)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function traverseTree(tree, moduleName, visitor, traceOpts, reversePost, parent, seen) {
+  if (!seen) {
+    // NB traceOpts.conditions should be strictly canonicalized on the first run
+    traceOpts = traceOpts || {};
+    verifyTree(tree);
+  }
+
+  seen = seen || [];
+  seen.push(moduleName);
+  parent = parent || null;
+
+  var curNode = tree[moduleName];
+
+  if (curNode &amp;&amp; visitor(moduleName, parent) !== false) {
+    var deps = getLoadDependencies(curNode, traceOpts, traceOpts.conditions, traceOpts.inlineConditions);
+    if (reversePost)
+      deps = deps.reverse();
+    deps.forEach(function(dep) {
+      if (seen.indexOf(dep) == -1)
+        traverseTree(tree, dep, visitor, traceOpts, reversePost, moduleName, seen);
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.systemjs-builder.builder" id="apidoc.module.systemjs-builder.builder">module systemjs-builder.builder</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.builder.builder" id="apidoc.element.systemjs-builder.builder.builder">
+        function <span class="apidocSignatureSpan">systemjs-builder.</span>builder
+        <span class="apidocSignatureSpan">(baseURL, cfg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Builder(baseURL, cfg) {
+  if (typeof baseURL == 'object') {
+    cfg = baseURL;
+    baseURL = null;
+  }
+
+  this.loader = null;
+  this.resetConfig = function() {};
+
+  this.reset();
+
+  if (baseURL)
+    this.config({ baseURL: baseURL });
+
+  // config passed to constructor will
+  // be saved for future .reset() calls
+  if (typeof cfg == 'object')
+    this.config(cfg, true, !!baseURL);
+  else if (typeof cfg == 'string')
+    this.loadConfigSync(cfg, true, !!baseURL);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.systemjs-builder.builder.prototype" id="apidoc.module.systemjs-builder.builder.prototype">module systemjs-builder.builder.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.builder.prototype.addTrees" id="apidoc.element.systemjs-builder.builder.prototype.addTrees">
+        function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>addTrees
+        <span class="apidocSignatureSpan">(tree1, tree2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addTrees(tree1, tree2) {
+  verifyTree(tree1);
+  verifyTree(tree2);
+
+  var name;
+  var unionTree = {};
+
+  for (name in tree2)
+    unionTree[name] = tree2[name];
+
+  for (name in tree1)
+    if (!(name in unionTree))
+      unionTree[name] = tree1[name];
+
+  return unionTree;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.builder.prototype.build" id="apidoc.element.systemjs-builder.builder.prototype.build">
+        function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>build
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">build = function () {
+  console.warn('builder.build is deprecated. Using builder.bundle instead.');
+  return this.bundle.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```javascript
+builder.config({
+  map: {
+    'a': 'b.js'
+  }
+});
+builder.<span class="apidocCodeKeywordSpan">build</span>('a');
+```
+
+To load custom configuration files use `builder.loadConfig`:
+
+```javascript
+// `builder.loadConfig` will load config from a file containing `System.config({...})`
+builder.loadConfig('./cfg.js')
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.builder.prototype.buildSFX" id="apidoc.element.systemjs-builder.builder.prototype.buildSFX">
+        function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>buildSFX
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">buildSFX = function () {
+  console.warn('builder.buildSFX is deprecated. Using builder.buildStatic instead.');
+  return this.buildStatic.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.builder.prototype.buildStatic" id="apidoc.element.systemjs-builder.builder.prototype.buildStatic">
+        function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>buildStatic
+        <span class="apidocSignatureSpan">(expressionOrTree, outFile, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">buildStatic = function (expressionOrTree, outFile, opts) {
+  if (outFile &amp;&amp; typeof outFile === 'object') {
+    opts = outFile;
+    outFile = undefined;
+  }
+
+  var self = this;
+
+  if (opts &amp;&amp; opts.config)
+    this.config(opts.config);
+
+  // NB this "first module" detection should really be done at the arithmetic level
+  // if only one module is provided, it is an entry point
+  var entryPoints;
+  if (typeof expressionOrTree == 'string')
+    entryPoints = [expressionOrTree.split(/ [\+\&amp;\-] /)[0]];
+  else if (expressionOrTree instanceof Array)
+    entryPoints = expressionOrTree[0];
+  else
+    entryPoints = [];
+  // ensure globs are not themsleves entry points
+  if (entryPoints[0] &amp;&amp; entryPoints[0].indexOf('*') != -1)
+    entryPoints = [];
+
+  var outputOpts = processOutputOpts(opts, { outFile: outFile });
+  // by default we build for production, but not necessarily the browser
+  var traceOpts = processTraceOpts(opts, { tracePackageConfig: false, production: true, dev: false });
+  var compileOpts = processCompileOpts(opts, { static: true, entryPoints: entryPoints, encodeNames: true });
+  var inlineMap;
+
+  // override the fetch function if given
+  if (opts &amp;&amp; opts.fetch)
+    this.fetch = opts.fetch;
+
+  return Promise.resolve()
+  .then(function() {
+    return canonicalizeConditions(self.loader, traceOpts);
+  })
+  .then(function() {
+    if (typeof expressionOrTree != 'string' &amp;&amp; !(expressionOrTree instanceof Array))
+      return expressionOrTree;
+
+    return setExternals(self, traceOpts.externals)
+    .then(function() {
+      return traceExpression(self, expressionOrTree, traceOpts);
+    });
+  })
+  .then(function(tree) {
+    // inline conditionals of the trace
+    return self.tracer.inlineConditions(tree, self.loader, traceOpts)
+    .then(function(inlinedTree) {
+      if (!compileOpts.rollup)
+        return compileTree(self.loader, inlinedTree, traceOpts, compileOpts, outputOpts, self.cache.compile);
+
+      var rollupTree = require('./rollup').rollupTree;
+
+      // attempt rollup optimizations of ESM entry points
+      return rollupTree(self.loader, inlinedTree, [], traceOpts, compileOpts, outputOpts)
+      .then(function(rolledUp) {
+        inlineMap = rolledUp.inlineMap;
+
+        // we rolled up parts of the tree
+        if (rolledUp.tree)
+          return compileTree(self.loader, rolledUp.tree, traceOpts, compileOpts, outputOpts, self.cache.compile);
+
+        // if we rolled up the whole tree, then we can skip compile and sfx wrapping entirely
+        else if (rolledUp.outputs)
+          return {
+            outputs: (compileOpts.formatHint ? [getFormatHint(compileOpts)] : []).concat(rolledUp.outputs),
+            assetList: rolledUp.assetList
+          };
+      })
+      .then(function(compiled) {
+        return {
+          modules: Object.keys(tree).filter(function(m) {
+            return tree[m] &amp;&amp; !tree[m].conditional;
+          }),
+          assetList: compiled.assetList || [],
+          outputs: compiled.outputs
+        };
+      })
+    })
+    .then(function(compiled) {
+      return writeOutputs(compiled.outputs, self.loader.baseURL, outputOpts)
+      .then(function(output) {
+        if (inlineMap)
+          output.inlineMap = inlineMap;
+        output.assetList = compiled.assetList;
+        output.modules = compiled.modules;
+        output.tree = tree;
+        return output;
+      });
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+When config was passed into the `new Builder(baseURL, configFile)` constructor, the config will be reset to this exact `configFile
+` state.
+
+### Self-Executing (SFX) Bundles
+
+To make a bundle that is independent of the SystemJS loader entirely, we can make SFX bundles:
+
+```javascript
+builder.<span class="apidocCodeKeywordSpan">buildStatic</span>('myModule.js', 'outfile.js', options);
+```
+
+This bundle file can then be included with a `&lt;script&gt;` tag, and no other dependencies would need to be included in the
+ page. You'll likely want your module
+to export a global variable when loaded from a script tag, and this can be configured via `globalName`.  For example
+
+```javascript
+builder.buildStatic('src/NavBar.js', 'dist/NavBarStaticBuild.js', {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.builder.prototype.buildTree" id="apidoc.element.systemjs-builder.builder.prototype.buildTree">
+        function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>buildTree
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">buildTree = function () {
+  console.warn('builder.buildTree is deprecated. Using builder.bundle instead, which takes both a tree object or expression string
+.');
+  return this.bundle.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.builder.prototype.bundle" id="apidoc.element.systemjs-builder.builder.prototype.bundle">
+        function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>bundle
+        <span class="apidocSignatureSpan">(expressionOrTree, outFile, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bundle = function (expressionOrTree, outFile, opts) {
+  if (outFile &amp;&amp; typeof outFile === 'object') {
+    opts = outFile;
+    outFile = undefined;
+  }
+
+  var self = this;
+
+  if (opts &amp;&amp; opts.config)
+    this.config(opts.config);
+
+  var outputOpts = processOutputOpts(opts, { outFile: outFile });
+  // by default we bundle for the browser in production
+  var traceOpts = processTraceOpts(opts, { tracePackageConfig: true, browser: true, node: false, production: true, dev: false });
+
+  var compileOpts = processCompileOpts(opts);
+
+  // override the fetch function if given
+  if (opts &amp;&amp; opts.fetch)
+    this.fetch = opts.fetch;
+
+  return Promise.resolve()
+  .then(function() {
+    return canonicalizeConditions(self.loader, traceOpts);
+  })
+  .then(function() {
+    if (typeof expressionOrTree != 'string' &amp;&amp; !(expressionOrTree instanceof Array))
+      return expressionOrTree;
+
+    return setExternals(self, traceOpts.externals)
+    .then(function() {
+      return traceExpression(self, expressionOrTree, traceOpts);
+    });
+  })
+  .then(function(tree) {
+    return Promise.resolve()
+    .then(function() {
+      if (compileOpts.inlineConditions)
+        return self.tracer.inlineConditions(tree, self.loader, traceOpts);
+      return tree;
+    })
+    .then(function(tree) {
+      return compileTree(self.loader, tree, traceOpts, compileOpts, outputOpts, self.cache.compile)
+      .then(function(compiled) {
+        return writeOutputs(compiled.outputs, self.loader.baseURL, outputOpts)
+        .then(function(output) {
+          output.modules = compiled.modules;
+          output.entryPoints = compiled.entryPoints;
+          output.tree = tree;
+          output.assetList = compiled.assetList;
+          if (outputOpts.outFile) {
+            try {
+              output.bundleName = self.getCanonicalName(toFileURL(path.resolve(outputOpts.outFile)));
+            }
+            catch(e) {}
+          }
+          return output;
+        });
+      });
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var Builder = require('systemjs-builder');
+
+// optional constructor options
+// sets the baseURL and loads the configuration file
+var builder = new Builder('path/to/baseURL', 'path/to/system/config-file.js');
+
+builder
+.<span class="apidocCodeKeywordSpan">bundle</span>('local/module.js', 'outfile.js')
+.then(function() {
+  console.log('Build complete');
+})
+.catch(function(err) {
+  console.log('Build error');
+  console.log(err);
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.builder.prototype.clearCache" id="apidoc.element.systemjs-builder.builder.prototype.clearCache">
+        function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>clearCache
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clearCache = function () {
+  this.setCache({});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.builder.prototype.compile" id="apidoc.element.systemjs-builder.builder.prototype.compile">
+        function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>compile
+        <span class="apidocSignatureSpan">(moduleNameOrLoad, outFile, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compile = function (moduleNameOrLoad, outFile, opts) {
+  if (outFile &amp;&amp; typeof outFile == 'object') {
+    opts = outFile;
+    outFile = undefined;
+  }
+
+  if (opts &amp;&amp; opts.config)
+    this.config(opts.config);
+
+  var self = this;
+
+  var traceOpts = processTraceOpts(opts, { tracePackageConfig: false, browser: true, node: false, production: true, dev: false,
+outputESM: false });
+
+  return Promise.resolve()
+  .then(function() {
+    return canonicalizeConditions(self.loader, traceOpts);
+  })
+  .then(function() {
+    if (typeof moduleNameOrLoad != 'string')
+      return moduleNameOrLoad;
+    return self.loader.normalize(moduleNameOrLoad)
+    .then(function(moduleName) {
+      if (!opts || opts.cache !== true)
+        self.invalidate(moduleName);
+      return self.tracer.getLoadRecord(getCanonicalName(self.loader, moduleName), traceOpts);
+    });
+  })
+  .then(function(load) {
+    var compileOpts = processCompileOpts(opts, { normalize: false, anonymous: true });
+    var outputOpts = processOutputOpts(opts, { outFile: outFile });
+
+    return Promise.resolve()
+    .then(function() {
+      return compileLoad(self.loader, load, processCompileOpts(opts, { normalize: false, anonymous: true }), self.cache.compile);
+    })
+    .then(function(output) {
+      if (load.metadata.loader)
+        return pluginBundleHook(self.loader, [load], compileOpts, outputOpts)
+        .then(function(bundleOutput) {
+          return [output].concat(bundleOutput.outputs);
+        });
+
+      return [output];
+    })
+    .then(function(outputs) {
+      return writeOutputs(outputs, self.loader.baseURL, outputOpts);
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+return { names: names, indices: indices };
+}
+
+// converts anonymous AMDs into named AMD for the module
+exports.compile = function (load, opts, loader) {
+opts.moduleId = !opts.anonymous &amp;&amp; load.name;
+return compiler.<span class="apidocCodeKeywordSpan">compile</span>(load, opts, [require('babel-plugin-transform-amd-system-
+wrapper').default, {
+  anonNamed: load.metadata.anonNamed,
+  map: function (dep) {
+    return opts.normalize ? load.depMap[dep] : dep;
+  },
+  systemGlobal: opts.systemGlobal,
+	  deps: load.deps
+}]);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.builder.prototype.config" id="apidoc.element.systemjs-builder.builder.prototype.config">
+        function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>config
+        <span class="apidocSignatureSpan">(config, saveForReset, ignoreBaseURL)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">config = function (config, saveForReset, ignoreBaseURL) {
+  var cfg = {};
+  for (var p in config) {
+    if (ignoreBaseURL &amp;&amp; p == 'baseURL' || p == 'bundles' || p == 'depCache')
+      continue;
+    cfg[p] = config[p];
+  }
+  this.loader.config(cfg);
+  if (saveForReset) {
+    // multiple config calls can be saved for reset
+    var curReset = this.resetConfig;
+    this.resetConfig = function() {
+      curReset.call(this);
+      this.loader.config(cfg);
+    };
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+### Setting Configuration
+
+Configuration can be injected via `builder.config`:
+
+```javascript
+builder.<span class="apidocCodeKeywordSpan">config</span>({
+  map: {
+    'a': 'b.js'
+  }
+});
+builder.build('a');
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.builder.prototype.getCache" id="apidoc.element.systemjs-builder.builder.prototype.getCache">
+        function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>getCache
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getCache = function () {
+  return this.cache;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.builder.prototype.getDeferredImports" id="apidoc.element.systemjs-builder.builder.prototype.getDeferredImports">
+        function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>getDeferredImports
+        <span class="apidocSignatureSpan">(tree)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDeferredImports = function (tree) {
+  var getDeferredImports = require('./get-deferred-imports');
+  return getDeferredImports(this, tree);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // plugins via syntax must build in the plugin package config
+  pluginConfig: null,
+
+  // packages have a config file that must be built in for bundles
+  packageConfig: null,
+  isPackageConfig: isPackageConfig(loader, canonical),
+
+  // these are only populated by the separate builder.<span class="apidocCodeKeywordSpan">getDeferredImports</span>(tree) method
+  deferredImports: null,
+
+  // in the case of Rollup, a single load can represent several compacted loads
+  compactedLoads: null,
+};
+var curHook = 'locate';
+var originalSource;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.builder.prototype.getDepCache" id="apidoc.element.systemjs-builder.builder.prototype.getDepCache">
+        function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>getDepCache
+        <span class="apidocSignatureSpan">(tree)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDepCache = function (tree) {
+  var depCache = {};
+  Object.keys(tree).forEach(function(moduleName) {
+    var load = tree[moduleName];
+    if (load &amp;&amp; load.deps &amp;&amp; load.deps.length)
+      depCache[moduleName] = load.deps.map(function(dep) {
+        return dep;
+      });
+  });
+  return depCache;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.builder.prototype.intersectTrees" id="apidoc.element.systemjs-builder.builder.prototype.intersectTrees">
+        function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>intersectTrees
+        <span class="apidocSignatureSpan">(tree1, tree2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function intersectTrees(tree1, tree2) {
+  verifyTree(tree1);
+  verifyTree(tree2);
+
+  var name;
+  var intersectTree = {};
+
+  var tree1Names = [];
+  for (name in tree1)
+    tree1Names.push(name);
+
+  for (name in tree2) {
+    if (tree1Names.indexOf(name) == -1)
+      continue;
+    // intersect deps layer (load: false) and actual bundle includes separately
+    if (tree1[name] === false &amp;&amp; tree2[name] === false)
+      continue;
+
+    intersectTree[name] = tree1[name] || tree2[name];
+  }
+
+  return intersectTree;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var builder = new Builder({
+  // ...
+});
+
+Promise.all([builder.trace('app/first.js'), builder.trace('app/second.js')])
+.then(function(trees) {
+  var commonTree = builder.<span class="apidocCodeKeywordSpan">intersectTrees</span>(trees[0], trees[1]);
+  return Promise.all([
+    builder.bundle(commonTree, 'shared-bundle.js'),
+    builder.bundle(builder.subtractTrees(trees[0], commonTree), 'first-bundle.js'),
+    builder.bundle(builder.subtractTrees(trees[1], commonTree), 'second-bundle.js')
+  ]);
+});
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.builder.prototype.invalidate" id="apidoc.element.systemjs-builder.builder.prototype.invalidate">
+        function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>invalidate
+        <span class="apidocSignatureSpan">(invalidationModuleName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">invalidate = function (invalidationModuleName) {
+  var loader = this.loader;
+
+  var invalidated = [];
+
+  var self = this;
+
+  // invalidation happens in normalized-space
+  invalidationModuleName = loader.decanonicalize(invalidationModuleName);
+
+  // wildcard detection and handling
+  var invalidationWildcardIndex = invalidationModuleName.indexOf('*');
+  if (invalidationModuleName.lastIndexOf('*') != invalidationWildcardIndex)
+    throw new TypeError('Only a single wildcard supported for invalidation.');
+
+  if (invalidationWildcardIndex != -1) {
+    var wildcardLHS = invalidationModuleName.substr(0, invalidationWildcardIndex);
+    var wildcardRHS = invalidationModuleName.substr(invalidationWildcardIndex + 1);
+  }
+
+  function matchesInvalidation(moduleName) {
+    if (moduleName == invalidationModuleName)
+      return true;
+
+    if (invalidationWildcardIndex == -1)
+      return false;
+
+    return moduleName.substr(0, invalidationWildcardIndex) == wildcardLHS
+        &amp;&amp; moduleName.substr(moduleName.length - wildcardRHS.length) == wildcardRHS;
+  }
+
+  // invalidate the given path in the trace cache
+  var traceCache = this.cache.trace;
+  Object.keys(traceCache).forEach(function(canonical) {
+    var moduleName = loader.decanonicalize(canonical);
+    if (matchesInvalidation(moduleName)) {
+      if (traceCache[canonical])
+        invalidated.push(moduleName);
+      traceCache[canonical] = undefined;
+    }
+  });
+
+  // clear the given path from the pluginLoader registry
+  var pluginLoader = loader.pluginLoader;
+  Object.keys(pluginLoader._loader.modules).forEach(function(moduleName) {
+    if (matchesInvalidation(moduleName)) {
+      invalidated.push(moduleName);
+      pluginLoader.delete(moduleName);
+    }
+  });
+
+  // clear the loader define cache
+  loader.defined = {};
+
+  // we leave the compile cache in-tact as it is hashed
+
+  // return array of invalidated canonicals
+  return invalidated;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.builder.prototype.loadConfig" id="apidoc.element.systemjs-builder.builder.prototype.loadConfig">
+        function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>loadConfig
+        <span class="apidocSignatureSpan">(configFile, saveForReset, ignoreBaseURL)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">loadConfig = function (configFile, saveForReset, ignoreBaseURL) {
+  return asp(fs.readFile)(configFile)
+  .then(executeConfigFile.bind(this, saveForReset, ignoreBaseURL, configFile));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+builder.build('a');
+```
+
+To load custom configuration files use `builder.loadConfig`:
+
+```javascript
+// `builder.loadConfig` will load config from a file containing `System.config({...})`
+builder.<span class="apidocCodeKeywordSpan">loadConfig</span>('./cfg.js')
+.then(function() {
+  // ready to build
+});
+```
+
+Multiple config calls can be run, which will combine into the loader configuration.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.builder.prototype.loadConfigSync" id="apidoc.element.systemjs-builder.builder.prototype.loadConfigSync">
+        function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>loadConfigSync
+        <span class="apidocSignatureSpan">(configFile, saveForReset, ignoreBaseURL)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">loadConfigSync = function (configFile, saveForReset, ignoreBaseURL) {
+  var source = fs.readFileSync(configFile);
+  executeConfigFile.call(this, saveForReset, ignoreBaseURL, configFile, source);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.builder.prototype.reset" id="apidoc.element.systemjs-builder.builder.prototype.reset">
+        function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>reset
+        <span class="apidocSignatureSpan">(baseLoader)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reset = function (baseLoader) {
+  baseLoader = baseLoader || this.loader || System;
+
+  var loader = this.loader = new baseLoader.constructor();
+  // make builder accessible in plugins
+  loader.builder = this;
+  // put the loader in the builder environment
+  loader.config({ build: true });
+
+  loader.import = function(name) {
+    return Promise.reject(new Error('Unable to import "' + name + '".\nThe incorrect instance of System is being used to System.
+import.'));
+  };
+
+  // ensure this loader doesn't attempt to load the runtime
+  loader._loader.loadedTranspilerRuntime = true;
+
+  var pluginLoader = loader.pluginLoader = new baseLoader.constructor();
+  pluginLoader.config({ build: true });
+
+  loader.constructor = pluginLoader.constructor = baseLoader.constructor;
+  loader.baseURL = pluginLoader.baseURL = baseLoader.baseURL;
+
+  loader.normalize = pluginLoader.normalize = baseLoader.normalize;
+  loader.normalizeSync = pluginLoader.normalizeSync = baseLoader.normalizeSync;
+
+  // store original hooks for next reset
+  loader.originalHooks = baseLoader.originalHooks || {
+    locate: baseLoader.locate,
+    fetch: baseLoader.fetch,
+    translate: baseLoader.translate,
+    instantiate: baseLoader.instantiate
+  };
+
+  loader.locate = pluginLoader.locate = loader.originalHooks.locate;
+  loader.fetch = pluginLoader.fetch = loader.originalHooks.fetch;
+  loader.translate = pluginLoader.translate = loader.originalHooks.translate;
+  loader.instantiate = pluginLoader.instantiate = loader.originalHooks.instantiate;
+
+  var loaderConfig = loader.config;
+  loader.config = function(cfg) {
+    // plugin loader is dev, Node environment
+    loader.pluginLoader.config(cfg);
+    var lCfg = extend({}, cfg);
+    loaderConfig.call(this, lCfg);
+    loader.configHash = generateConfigHash(loader);
+  };
+
+  this.getCanonicalName = getCanonicalName.bind(null, this.loader);
+  this.loader.getCanonicalName = this.loader.pluginLoader.getCanonicalName = this.getCanonicalName;
+
+  attachCompilers(loader);
+
+  var builder = this;
+
+  // allow a custom fetch hook
+  var loaderFetch = loader.fetch;
+  var cachedFetch = function(load) {
+    return Promise.resolve(loaderFetch.call(this, load))
+    .then(function(source) {
+      // calling default fs.readFile fetch -&gt; set timestamp as well for cache invalidation
+      return asp(fs.stat)(fromFileURL(load.address))
+      .then(function(stats) {
+        load.metadata.timestamp = stats.mtime.getTime();
+        return source;
+      }, function(err) {
+        // if the stat fails on a plugin, it may not be linked to the file itself
+        if (err.code == 'ENOENT' &amp;&amp; load.metadata.loader)
+          return source;
+        throw err;
+      });
+    });
+  };
+
+  loader.fetch = function(load) {
+    if (builder.fetch)
+      return Promise.resolve(builder.fetch.call(this, load, cachedFetch.bind(this)));
+    else
+      return cachedFetch.call(this, load);
+  };
+
+  // this allows us to normalize package conditionals into package conditionals
+  // package environment normalization handling for fallbacks,
+  // which dont resolve in the loader itself unlike other conditionals which
+  // have this condition inlined under loader.builder in conditionals.js
+  var loaderNormalize = loader.normalize;
+  loader.normalize = function(name, parentName, parentAddress) {
+    var pkgConditional;
+    var pkgConditionalIndex = name.indexOf('/#:');
+    if (pkgConditionalIndex != -1) {
+      pkgConditional = name.substr(pkgConditionalIndex);
+      name = name.substr(0, pkgConditionalIndex + 1);
+    }
+    return loaderNormalize.call(this, name, parentName, parentAddress)
+    .then(function(normalized) {
+      if (pkgConditional)
+        normalized = normalized + pkgConditional;
+      return normalized;
+    });
+  };
+
+  var loaderNormalizeSync = loader.normalizeSync;
+  loader.normalizeSync = function(name, parentName, parentAddress) {
+    var pkgConditional;
+    var pkgConditionalIndex = name.indexOf('#:');
+    if (pkgConditionalIndex != -1) {
+      pkgConditional = name.substr(pkgConditionalIndex);
+      name = name.substr(0, pkgConditionalIndex) + '/';
+    }
+    var norma ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+```
+
+Multiple config calls can be run, which will combine into the loader configuration.
+
+#### Resetting Configuration
+
+To reset the loader state and configuration use `builder.<span class="apidocCodeKeywordSpan">reset</span>()`.
+
+When config was passed into the `new Builder(baseURL, configFile)` constructor, the config will be reset to this exact `configFile
+` state.
+
+### Self-Executing (SFX) Bundles
+
+To make a bundle that is independent of the SystemJS loader entirely, we can make SFX bundles:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.builder.prototype.setCache" id="apidoc.element.systemjs-builder.builder.prototype.setCache">
+        function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>setCache
+        <span class="apidocSignatureSpan">(cacheObj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setCache = function (cacheObj) {
+  this.cache = {
+    compile: cacheObj.compile || {},
+    trace: cacheObj.trace || {}
+  };
+  this.cache.compile.encodings = this.cache.compile.encodings || {};
+  this.cache.compile.loads = this.cache.compile.loads || {};
+  this.tracer = new Trace(this.loader, this.cache.trace);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.builder.prototype.subtractTrees" id="apidoc.element.systemjs-builder.builder.prototype.subtractTrees">
+        function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>subtractTrees
+        <span class="apidocSignatureSpan">(tree1, tree2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function subtractTrees(tree1, tree2) {
+  verifyTree(tree1);
+  verifyTree(tree2);
+
+  var name;
+  var subtractTree = {};
+
+  for (name in tree1)
+    subtractTree[name] = tree1[name];
+
+  for (name in tree2) {
+    if (tree2[name] !== false)
+      delete subtractTree[name];
+  }
+
+  return subtractTree;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+
+Promise.all([builder.trace('app/first.js'), builder.trace('app/second.js')])
+.then(function(trees) {
+  var commonTree = builder.intersectTrees(trees[0], trees[1]);
+  return Promise.all([
+    builder.bundle(commonTree, 'shared-bundle.js'),
+    builder.bundle(builder.<span class="apidocCodeKeywordSpan">subtractTrees</span>(trees[0], commonTree), 'first-bundle.js
+'),
+    builder.bundle(builder.subtractTrees(trees[1], commonTree), 'second-bundle.js')
+  ]);
+});
+```
+
+License
+---
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.builder.prototype.trace" id="apidoc.element.systemjs-builder.builder.prototype.trace">
+        function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>trace
+        <span class="apidocSignatureSpan">(expression, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">trace = function (expression, opts) {
+  if (opts &amp;&amp; opts.config)
+    this.config(opts.config);
+
+  var traceOpts = processTraceOpts(opts);
+  var self = this;
+  return canonicalizeConditions(self.loader, traceOpts)
+  .then(function() {
+    return setExternals(this, traceOpts.externals);
+  })
+  .then(function() {
+    return traceExpression(self, expression, traceOpts);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```javascript
+var Builder = require('systemjs-builder');
+
+var builder = new Builder({
+// ...
+});
+
+Promise.all([builder.<span class="apidocCodeKeywordSpan">trace</span>('app/first.js'), builder.trace('app/second.
+js')])
+.then(function(trees) {
+var commonTree = builder.intersectTrees(trees[0], trees[1]);
+return Promise.all([
+  builder.bundle(commonTree, 'shared-bundle.js'),
+  builder.bundle(builder.subtractTrees(trees[0], commonTree), 'first-bundle.js'),
+  builder.bundle(builder.subtractTrees(trees[1], commonTree), 'second-bundle.js')
+]);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.builder.prototype.traceConditionalEnv" id="apidoc.element.systemjs-builder.builder.prototype.traceConditionalEnv">
+        function <span class="apidocSignatureSpan">systemjs-builder.builder.prototype.</span>traceConditionalEnv
+        <span class="apidocSignatureSpan">(expression, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">traceConditionalEnv = function (expression, opts) {
+  var traceOpts = processTraceOpts(opts);
+
+  var self = this;
+
+  return canonicalizeConditions(self.loader, traceOpts)
+  .then(function() {
+    return self.trace(expression, traceOpts);
+  })
+  .then(function(tree) {
+    return Trace.getConditionalEnv(self, tree, traceOpts);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.systemjs-builder.cjs" id="apidoc.module.systemjs-builder.cjs">module systemjs-builder.cjs</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.cjs.compile" id="apidoc.element.systemjs-builder.cjs.compile">
+        function <span class="apidocSignatureSpan">systemjs-builder.cjs.</span>compile
+        <span class="apidocSignatureSpan">(load, opts, loader)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compile = function (load, opts, loader) {
+
+  opts.moduleId = !opts.anonymous &amp;&amp; load.name;
+
+  var deps = opts.normalize ? load.deps.map(function (dep) { return load.depMap[dep]; }) : load.deps;
+
+  // send normalized globals into the transformer
+  var normalizedGlobals;
+  if (load.metadata.globals) {
+    normalizedGlobals = {};
+    for (var g in load.metadata.globals)
+      normalizedGlobals[g] = opts.normalize ? load.depMap[load.metadata.globals[g]] : load.metadata.globals[g];
+  }
+
+  // remove loader base url from path
+  var path;
+  if (opts.static) {
+    path = load.path;
+    if (path.substr(0, loader.baseURL.length) == loader.baseURL)
+      path = path.substr(loader.baseURL.length);
+  }
+
+  return compiler.compile(load, opts, [require('babel-plugin-transform-cjs-system-wrapper').default, {
+    deps: deps,
+    globals: normalizedGlobals,
+    optimize: opts.production,
+    map: function(dep) {
+      return opts.normalize ? load.depMap[dep] : dep;
+    },
+    path: path,
+    static: opts.static,
+    systemGlobal: opts.systemGlobal
+  }]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+return { names: names, indices: indices };
+}
+
+// converts anonymous AMDs into named AMD for the module
+exports.compile = function (load, opts, loader) {
+opts.moduleId = !opts.anonymous &amp;&amp; load.name;
+return compiler.<span class="apidocCodeKeywordSpan">compile</span>(load, opts, [require('babel-plugin-transform-amd-system-
+wrapper').default, {
+  anonNamed: load.metadata.anonNamed,
+  map: function (dep) {
+    return opts.normalize ? load.depMap[dep] : dep;
+  },
+  systemGlobal: opts.systemGlobal,
+	  deps: load.deps
+}]);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.systemjs-builder.compile" id="apidoc.module.systemjs-builder.compile">module systemjs-builder.compile</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.compile.attachCompilers" id="apidoc.element.systemjs-builder.compile.attachCompilers">
+        function <span class="apidocSignatureSpan">systemjs-builder.compile.</span>attachCompilers
+        <span class="apidocSignatureSpan">(loader)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">attachCompilers = function (loader) {
+  Object.keys(compilerMap).forEach(function(compiler) {
+    var attach = require(compilerMap[compiler]).attach;
+    if (attach)
+      attach(loader);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.compile.compileLoad" id="apidoc.element.systemjs-builder.compile.compileLoad">
+        function <span class="apidocSignatureSpan">systemjs-builder.compile.</span>compileLoad
+        <span class="apidocSignatureSpan">(loader, load, compileOpts, cache)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function compileLoad(loader, load, compileOpts, cache) {
+  // use cached if we have it
+  var cached = cache.loads[load.name];
+  if (cached &amp;&amp; cached.hash == getCompileHash(load, compileOpts))
+    return Promise.resolve(cached.output);
+
+  // create a new load record with any necessary final mappings
+  function remapLoadRecord(load, mapFunction) {
+    load = extend({}, load);
+    load.name = mapFunction(load.name, load.name);
+    var depMap = {};
+    Object.keys(load.depMap).forEach(function(dep) {
+      depMap[dep] = mapFunction(load.depMap[dep], dep);
+    });
+    load.depMap = depMap;
+    return load;
+  }
+  var mappedLoad = remapLoadRecord(load, function(name, original) {
+    // do SFX encodings
+    if (compileOpts.encodeNames)
+      return getEncoding(name, cache.encodings, loader);
+
+    if (compileOpts.normalize &amp;&amp; name.indexOf('#:') != -1)
+      throw new Error('Unable to build dependency ' + name + '. normalize must be disabled for bundles containing conditionals.');
+
+    return name;
+  });
+
+  var format = load.metadata.format;
+
+  if (format == 'defined')
+    return Promise.resolve({ source:  compileOpts.systemGlobal + '.register("' + mappedLoad.name + '", [], function() { return {
+setters: [], execute: function() {} } });\n' });
+
+  if (format in compilerMap) {
+    if (format == 'cjs')
+      mappedLoad.source = mappedLoad.source.replace(hashBangRegEx, '');
+    return Promise.resolve()
+    .then(function() {
+      return require(compilerMap[format]).compile(mappedLoad, compileOpts, loader);
+    })
+    .then(function(output) {
+      // store compiled output in cache
+      cache.loads[load.name] = {
+        hash: getCompileHash(load, compileOpts),
+        output: output
+      };
+
+      return output;
+    })
+    .catch(function(err) {
+      // Traceur has a habit of throwing array errors
+      if (err instanceof Array)
+        err = err[0];
+      err.message = 'Error compiling ' + format + ' module "' + load.name + '" at ' + load.path + '\n\t' + err.message;
+      throw err;
+    });
+  }
+
+  return Promise.reject(new TypeError('Unknown module format ' + format));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.compile.compileTree" id="apidoc.element.systemjs-builder.compile.compileTree">
+        function <span class="apidocSignatureSpan">systemjs-builder.compile.</span>compileTree
+        <span class="apidocSignatureSpan">(loader, tree, traceOpts, compileOpts, outputOpts, cache)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function compileTree(loader, tree, traceOpts, compileOpts, outputOpts, cache) {
+
+  // verify that the tree is a tree
+  verifyTree(tree);
+
+  var ordered = getTreeModulesPostOrder(tree, traceOpts);
+
+  var inputEntryPoints;
+
+  // get entrypoints from graph algorithm
+  var entryPoints;
+
+  var modules;
+
+  var outputs = [];
+
+  var compilers = {};
+
+  return Promise.resolve()
+  .then(function() {
+    // compileOpts.entryPoints can be unnormalized
+    if (!compileOpts.entryPoints)
+      return [];
+
+    return Promise.all(compileOpts.entryPoints.map(function(entryPoint) {
+      return loader.normalize(entryPoint)
+      .then(function(normalized) {
+        return loader.getCanonicalName(normalized);
+      });
+    }))
+    .filter(function(inputEntryPoint) {
+      // skip conditional entry points and entry points not in the tree (eg rollup optimized out)
+      return !inputEntryPoint.match(/\#\:|\#\?|\#{/) &amp;&amp; tree[inputEntryPoint];
+    })
+  })
+  .then(function(inputEntryPoints) {
+    entryPoints = inputEntryPoints || [];
+
+    ordered.entryPoints.forEach(function(entryPoint) {
+      if (entryPoints.indexOf(entryPoint) == -1)
+        entryPoints.push(entryPoint);
+    });
+
+    modules = ordered.modules.filter(function(moduleName) {
+      var load = tree[moduleName];
+      if (load.runtimePlugin &amp;&amp; compileOpts.static)
+        throw new TypeError('Plugin ' + load.plugin + ' does not support static builds, compiling ' + load.name + '.');
+      return load &amp;&amp; !load.conditional &amp;&amp; !load.runtimePlugin;
+    });
+
+    if (compileOpts.encodeNames)
+      entryPoints = entryPoints.map(function(name) {
+        return getEncoding(name, cache.encodings, loader);
+      });
+  })
+
+  // create load output objects
+  .then(function() {
+    return Promise.all(modules.map(function(name) {
+      return Promise.resolve()
+      .then(function() {
+        var load = tree[name];
+
+        if (load === true)
+          throw new TypeError(name + ' was defined via a bundle, so can only be used for subtraction or union operations.');
+
+        return compileLoad(loader, tree[name], compileOpts, cache);
+      });
+    }));
+  })
+  .then(function(compiled) {
+    outputs = outputs.concat(compiled);
+  })
+
+  // run plugin bundle hook
+  .then(function() {
+    var pluginLoads = [];
+
+    modules.forEach(function(name) {
+      var load = tree[name];
+
+      pluginLoads.push(load);
+
+      // if we used Rollup, we should still run the bundle hook for the child loads that were compacted
+      if (load.compactedLoads)
+        load.compactedLoads.forEach(function(load) {
+          pluginLoads.push(load);
+        });
+    });
+
+    return pluginBundleHook(loader, pluginLoads, compileOpts, outputOpts);
+  })
+  .then(function(pluginResults) {
+    outputs = outputs.concat(pluginResults.outputs);
+    var assetList = pluginResults.assetList;
+
+    return Promise.resolve()
+    .then(function() {
+      // if any module in the bundle is AMD, add a "bundle" meta to the bundle
+      // this can be deprecated if https://github.com/systemjs/builder/issues/264 lands
+      if (modules.some(function(name) {
+            return tree[name].metadata.format == 'amd';
+          }) &amp;&amp; !compileOpts.static)
+        outputs.unshift('"bundle";');
+
+      // static bundle wraps with a self-executing loader
+      if (compileOpts.static)
+        return wrapSFXOutputs(loader, tree, modules, outputs, entryPoints, compileOpts, cache);
+
+      return outputs;
+    })
+    .then(function(outputs) {
+      // NB also include all aliases of all entryPoints along with entryPoints
+      return {
+        outputs: outputs,
+        entryPoints: entryPoints,
+        assetList: assetList,
+        modules: modules.reverse()
+      };
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.compile.getTreeModulesPostOrder" id="apidoc.element.systemjs-builder.compile.getTreeModulesPostOrder">
+        function <span class="apidocSignatureSpan">systemjs-builder.compile.</span>getTreeModulesPostOrder
+        <span class="apidocSignatureSpan">(tree, traceOpts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getTreeModulesPostOrder(tree, traceOpts) {
+  var entryPoints = [];
+
+  // build up the map of parents of the graph
+  var entryMap = {};
+
+  var moduleList = Object.keys(tree).filter(function(module) {
+    return tree[module] !== false;
+  }).sort();
+
+  // for each module in the tree, we traverse the whole tree
+  // we then relate each module in the tree to the first traced entry point
+  moduleList.forEach(function(entryPoint) {
+    traverseTree(tree, entryPoint, function(depName, parentName) {
+      // if we have a entryMap for the given module, then stop
+      if (entryMap[depName])
+        return false;
+
+      if (parentName)
+        entryMap[depName] = entryPoint;
+    }, traceOpts);
+  });
+
+  // the entry points are then the modules not represented in entryMap
+  moduleList.forEach(function(entryPoint) {
+    if (!entryMap[entryPoint])
+      entryPoints.push(entryPoint);
+  });
+
+  // now that we have the entry points, sort them alphabetically and
+  // run the traversal to get the ordered module list
+  entryPoints = entryPoints.sort();
+
+  var modules = [];
+
+  entryPoints.reverse().forEach(function(moduleName) {
+    traverseTree(tree, moduleName, function(depName, parentName) {
+      if (modules.indexOf(depName) == -1)
+        modules.push(depName);
+    }, traceOpts, true);
+  });
+
+  return {
+    entryPoints: entryPoints,
+    modules: modules.reverse()
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.compile.pluginBundleHook" id="apidoc.element.systemjs-builder.compile.pluginBundleHook">
+        function <span class="apidocSignatureSpan">systemjs-builder.compile.</span>pluginBundleHook
+        <span class="apidocSignatureSpan">(loader, loads, compileOpts, outputOpts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pluginBundleHook(loader, loads, compileOpts, outputOpts) {
+  var outputs = [];
+  // plugins have the ability to report an asset list during builds
+  var assetList = [];
+  var pluginLoads = {};
+
+  // store just plugin loads
+  loads.forEach(function(load) {
+    if (load.metadata.loader) {
+      var pluginLoad = extend({}, load);
+      pluginLoad.address = loader.baseURL + load.path;
+      (pluginLoads[load.metadata.loader] = pluginLoads[load.metadata.loader] || []).push(pluginLoad);
+    }
+  });
+
+  return Promise.all(Object.keys(pluginLoads).map(function(pluginName) {
+    var loads = pluginLoads[pluginName];
+    var loaderModule = loads[0].metadata.loaderModule;
+
+    if (loaderModule.listAssets)
+      return Promise.resolve(loaderModule.listAssets.call(loader.pluginLoader, loads, compileOpts, outputOpts))
+      .then(function(_assetList) {
+        assetList = assetList.concat(_assetList.map(function(asset) {
+          return {
+            url: asset.url,
+            type: asset.type,
+            source: asset.source,
+            sourceMap: asset.sourceMap
+          };
+        }));
+      });
+  }))
+  .then(function() {
+    return Promise.all(Object.keys(pluginLoads).map(function(pluginName) {
+      var loads = pluginLoads[pluginName];
+      var loaderModule = loads[0].metadata.loaderModule;
+
+      if (compileOpts.inlinePlugins) {
+        if (loaderModule.inline) {
+          return Promise.resolve(loaderModule.inline.call(loader.pluginLoader, loads, compileOpts, outputOpts));
+        }
+        // NB deprecate bundle hook for inline hook
+        else if (loaderModule.bundle) {
+          // NB deprecate the 2 argument form
+          if (loaderModule.bundle.length &lt; 3)
+            return Promise.resolve(loaderModule.bundle.call(loader.pluginLoader, loads, extend(extend({}, compileOpts), outputOpts
+)));
+          else
+            return Promise.resolve(loaderModule.bundle.call(loader.pluginLoader, loads, compileOpts, outputOpts));
+        }
+      }
+    }));
+  })
+  .then(function(compiled) {
+    var outputs = [];
+    compiled = compiled || [];
+    compiled.forEach(function(output) {
+      if (output instanceof Array)
+        outputs = outputs.concat(output);
+      else if (output)
+        outputs.push(output);
+    });
+
+    return {
+      outputs: outputs,
+      assetList: assetList
+    };
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.compile.wrapSFXOutputs" id="apidoc.element.systemjs-builder.compile.wrapSFXOutputs">
+        function <span class="apidocSignatureSpan">systemjs-builder.compile.</span>wrapSFXOutputs
+        <span class="apidocSignatureSpan">(loader, tree, modules, outputs, entryPoints, compileOpts, cache)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapSFXOutputs(loader, tree, modules, outputs, entryPoints, compileOpts, cache) {
+  var compilers = {};
+  var externalDeps = [];
+
+  Object.keys(tree).forEach(function(module) {
+    if (tree[module] === false &amp;&amp; !loader.has(module))
+      externalDeps.push(module);
+  });
+
+  externalDeps.sort();
+
+  // determine compilers used
+  var legacyTranspiler = false;
+  modules.forEach(function(name) {
+    if (!legacyTranspiler &amp;&amp; tree[name].metadata.originalSource)
+      legacyTranspiler = true;
+    compilers[tree[name].metadata.format] = true;
+  });
+
+  // include compiler helpers at the beginning of outputs
+  Object.keys(compilerMap).forEach(function(format) {
+    if (!compilers[format])
+      return;
+    var compiler = require(compilerMap[format]);
+    if (compiler.sfx)
+      outputs.unshift(compiler.sfx(loader));
+  });
+
+  // determine if the SFX bundle has any external dependencies it relies on
+  var globalDeps = [];
+  modules.forEach(function(name) {
+    var load = tree[name];
+
+    // check all deps are present
+    load.deps.forEach(function(dep) {
+      var key = load.depMap[dep];
+      if (!(key in tree) &amp;&amp; !loader.has(key)) {
+        if (compileOpts.format == 'esm')
+          throw new TypeError('ESM static builds with externals only work when all modules in the build are ESM.');
+
+        if (externalDeps.indexOf(key) == -1)
+          externalDeps.push(key);
+      }
+    });
+  });
+
+  var externalDepIds = externalDeps.map(function(dep) {
+    if (compileOpts.format == 'global' ||
+        compileOpts.format == 'umd' &amp;&amp; (compileOpts.globalName || Object.keys(compileOpts.globalDeps).length &gt; 0)) {
+      var alias = getAlias(loader, dep);
+      var globalDep = compileOpts.globalDeps[dep] || compileOpts.globalDeps[alias];
+      if (!globalDep)
+        throw new TypeError('Global SFX bundle dependency "' + alias +
+         '" must be configured to an environment global via the globalDeps option.');
+
+      globalDeps.push(globalDep);
+    }
+
+    // remove external deps from calculated entry points list
+    var entryPointIndex = entryPoints.indexOf(dep);
+    if (entryPointIndex != -1)
+      entryPoints.splice(entryPointIndex, 1);
+
+    if (compileOpts.encodeNames)
+      return getEncoding(dep, cache.encodings, loader);
+    else
+      return dep;
+  });
+
+  // next wrap with the core code
+  return asp(fs.readFile)(path.resolve(__dirname, '../templates/sfx-core.min.js'))
+  .then(function(sfxcore) {
+    // for NodeJS execution to work correctly, we need to ensure the scoped module, exports and require variables are nulled out
+    outputs.unshift("var require = this.require, exports = this.exports, module = this.module;");
+
+    // if the first entry point is a dynamic module, then it is exportDefault always by default
+    var exportDefault = compileOpts.exportDefault;
+    var exportedLoad = tree[compileOpts.encodeNames &amp;&amp; getName(entryPoints[0], cache.encodings) || entryPoints[0]];
+    if (exportedLoad &amp;&amp; exportedLoad.metadata.format != 'system' &amp;&amp; exportedLoad.metadata.format != 'esm')
+      exportDefault = true;
+
+    outputs.unshift(sfxcore.toString(), "(" + JSON.stringify(entryPoints) + ", " + JSON.stringify(externalDepIds) + ", " +
+        (exportDefault ? "true" : "false") + ", function(" + compileOpts.systemGlobal + ") {");
+
+    outputs.push("})");
+    return asp(fs.readFile)(path.resolve(__dirname, '../templates/sfx-' + compileOpts.format + '.js'));
+  })
+  // then include the sfx module format wrapper
+  .then(function(formatWrapper) {
+    outputs.push(template(formatWrapper.toString(), {
+      deps: externalDeps.map(function(dep) {
+        if (dep.indexOf('#:') != -1)
+          dep = dep.replace('#:/', '/');
+        var name = getAlias(loader, dep);
+        return name;
+      }),
+      globalDeps: globalDeps,
+      globalName: compileOpts.globalName
+    }));
+  })
+  // then wrap with the runtime
+  .then(function() {
+    if (!legacyTranspiler)
+      return;
+
+    // NB legacy runtime wrappings
+    var usesBabelHelpersGlobal = modules.some(function(name) {
+      return tree[name].metadata.usesBabelHelpersGlobal;
+    });
+    // regen ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.systemjs-builder.compiler" id="apidoc.module.systemjs-builder.compiler">module systemjs-builder.compiler</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.compiler.compile" id="apidoc.element.systemjs-builder.compiler.compile">
+        function <span class="apidocSignatureSpan">systemjs-builder.compiler.</span>compile
+        <span class="apidocSignatureSpan">(load, opts, plugin)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compile = function (load, opts, plugin) {
+  var sourceRoot = pathToUrl(path.dirname(load.path) + '/');
+  var options = {
+    babelrc: false,
+    compact: false,
+    sourceType: 'script',
+    filename: pathToUrl(load.path),
+    filenameRelative: path.basename(load.path),
+    inputSourceMap: load.metadata.sourceMap,
+    moduleId: opts.moduleId,
+    sourceFileName: load.path &amp;&amp; path.basename(load.path),
+    sourceMaps: !!opts.sourceMaps,
+    sourceRoot: sourceRoot,
+    plugins: [plugin]
+  };
+
+  var source = load.metadata.originalSource || load.source;
+
+  var output;
+  if (load.metadata.ast) {
+    output = babel.transformFromAst(load.metadata.ast, source, options);
+  } else {
+    output = babel.transform(source, options);
+  }
+
+  var sourceMap = output.map;
+  if (sourceMap &amp;&amp; !sourceMap.sourceRoot) // if input source map doesn't have sourceRoot - add it
+    sourceMap.sourceRoot = sourceRoot;
+
+  return Promise.resolve({
+    source: output.code,
+    sourceMap: sourceMap
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+return { names: names, indices: indices };
+}
+
+// converts anonymous AMDs into named AMD for the module
+exports.compile = function (load, opts, loader) {
+opts.moduleId = !opts.anonymous &amp;&amp; load.name;
+return compiler.<span class="apidocCodeKeywordSpan">compile</span>(load, opts, [require('babel-plugin-transform-amd-system-
+wrapper').default, {
+  anonNamed: load.metadata.anonNamed,
+  map: function (dep) {
+    return opts.normalize ? load.depMap[dep] : dep;
+  },
+  systemGlobal: opts.systemGlobal,
+	  deps: load.deps
+}]);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.compiler.compileAst" id="apidoc.element.systemjs-builder.compiler.compileAst">
+        function <span class="apidocSignatureSpan">systemjs-builder.compiler.</span>compileAst
+        <span class="apidocSignatureSpan">(load, plugin)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compileAst = function (load, plugin) {
+  return babel.transform(load.source, {
+      babelrc: false,
+      compact: false,
+      filename: load.path,
+      inputSourceMap: load.metadata.sourceMap,
+      ast: true,
+      plugins: [plugin]
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    var loader = this;
+
+    return systemInstantiate.call(this, load).then(function (result) {
+      if (load.metadata.format == 'amd') {
+
+if (!load.source) load.source = ' ';
+
+var output = compiler.<span class="apidocCodeKeywordSpan">compileAst</span>(load, [require('babel-plugin-transform-amd-system
+-wrapper').default, { filterMode: true }]);
+load.metadata.ast = output.ast;
+load.metadata.anonNamed = output.metadata.anonNamed;
+
+var entry = loader.defined[load.name];
+entry.deps = dedupe(output.metadata.amdDeps.concat(load.metadata.deps));
+
+load.metadata.builderExecute = function (require, exports, module) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.systemjs-builder.esm" id="apidoc.module.systemjs-builder.esm">module systemjs-builder.esm</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.esm.TraceurImportNormalizeTransformer" id="apidoc.element.systemjs-builder.esm.TraceurImportNormalizeTransformer">
+        function <span class="apidocSignatureSpan">systemjs-builder.esm.</span>TraceurImportNormalizeTransformer
+        <span class="apidocSignatureSpan">(map)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function TraceurImportNormalizeTransformer(map) {
+  this.map = map;
+  return ParseTreeTransformer.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.esm.attach" id="apidoc.element.systemjs-builder.esm.attach">
+        function <span class="apidocSignatureSpan">systemjs-builder.esm.</span>attach
+        <span class="apidocSignatureSpan">(loader)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">attach = function (loader) {
+  var systemInstantiate = loader.instantiate;
+  loader.instantiate = function(load) {
+    // skip plugin loader attachment || non es modules || es modules handled by internal transpilation layer
+    if (!loader.builder || load.metadata.format != 'esm' || load.metadata.originalSource)
+      return systemInstantiate.call(this, load);
+
+    var depsList = load.metadata.deps.concat([]);
+
+    var babel = require('babel-core');
+    var output = babel.transform(load.source, {
+      babelrc: false,
+      compact: false,
+      filename: load.path,
+      //sourceFileName: load.path,
+      inputSourceMap: load.metadata.sourceMap,
+      ast: true,
+      resolveModuleSource: function(dep) {
+        if (depsList.indexOf(dep) == -1)
+          depsList.push(dep);
+        return dep;
+      }
+    });
+    // turn back on comments (for some reason!)
+    output.ast.comments.forEach(function(comment) {
+      comment.ignore = false;
+    });
+    load.metadata.ast = output.ast;
+
+    return Promise.resolve({
+      deps: depsList,
+      execute: null
+    });
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.esm.compile" id="apidoc.element.systemjs-builder.esm.compile">
+        function <span class="apidocSignatureSpan">systemjs-builder.esm.</span>compile
+        <span class="apidocSignatureSpan">(load, opts, loader)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compile = function (load, opts, loader) {
+  if (!load.metadata.originalSource || load.metadata.loader &amp;&amp; load.metadata.format == 'esm') {
+    var babel = require('babel-core');
+
+    var babelOptions = {
+      babelrc: false,
+      compact: false,
+      plugins: [[require('babel-plugin-transform-es2015-modules-systemjs'), { systemGlobal: opts.systemGlobal }]],
+      filename: load.path,
+      //sourceFileName: load.path,
+      sourceMaps: !!opts.sourceMaps,
+      inputSourceMap: load.metadata.sourceMap,
+      moduleIds: !opts.anonymous,
+      moduleId: !opts.anonymous &amp;&amp; load.name,
+      code: true,
+      resolveModuleSource: function(dep) {
+        if (opts.normalize)
+          return load.depMap[dep];
+        else
+          return dep;
+      }
+    };
+
+    var source = load.metadata.originalSource || load.source;
+
+    var output;
+    if (load.metadata.ast)
+      output = babel.transformFromAst(load.metadata.ast, source, babelOptions);
+    else
+      output = babel.transform(source, babelOptions);
+
+    // NB this can be removed with merging of ()
+    if (opts.systemGlobal != 'System')
+      output.code = output.code.replace(/(\s|^)System\.register\(/, '$1' + opts.systemGlobal + '.register(');
+
+    // for some reason Babel isn't respecting sourceFileName...
+    if (output.map &amp;&amp; !load.metadata.sourceMap)
+      output.map.sources[0] = load.path;
+
+    return Promise.resolve({
+      source: output.code,
+      sourceMap: output.map
+    });
+  }
+
+  // ... legacy transpilation, to be deprecated with internal transpilation layer
+  return Promise.resolve(global[loader.transpiler == 'typescript' ? 'ts' : loader.transpiler] || loader.pluginLoader.import(loader
+.transpiler))
+  .then(function(transpiler) {
+    if (transpiler.__useDefault)
+      transpiler = transpiler['default'];
+
+    if (transpiler.Compiler) {
+      var options = loader.traceurOptions || {};
+      options.modules = 'instantiate';
+      options.script = false;
+      options.sourceRoot = true;
+      options.moduleName = !opts.anonymous;
+
+      if (opts.sourceMaps)
+        options.sourceMaps = 'memory';
+      if (opts.lowResSourceMaps)
+        options.lowResolutionSourceMap = true;
+
+      if (load.metadata.sourceMap)
+        options.inputSourceMap = load.metadata.sourceMap;
+
+      var compiler = new transpiler.Compiler(options);
+
+      var tree = compiler.parse(load.source, load.path);
+
+      var transformer = new TraceurImportNormalizeTransformer(function(dep) {
+        return opts.normalize ? load.depMap[dep] : dep;
+      });
+
+      tree = transformer.transformAny(tree);
+
+      tree = compiler.transform(tree, load.name);
+
+      var outputSource = compiler.write(tree, load.path);
+
+      if (outputSource.match(/\$traceurRuntime/))
+        load.metadata.usesTraceurRuntimeGlobal = true;
+
+      return Promise.resolve({
+        source: outputSource,
+        sourceMap: compiler.getSourceMap()
+      });
+    }
+    else if (transpiler.createLanguageService) {
+      var options = loader.typescriptOptions || {};
+      if (options.target === undefined)
+        options.target = transpiler.ScriptTarget.ES5;
+      options.module = transpiler.ModuleKind.System;
+
+      var transpileOptions = {
+        compilerOptions: options,
+        renamedDependencies: load.depMap,
+        fileName: load.path,
+        moduleName: !opts.anonymous &amp;&amp; load.name
+      };
+
+      var transpiled = transpiler.transpileModule(load.source, transpileOptions);
+
+      return Promise.resolve({
+        source: transpiled.outputText,
+        sourceMap: transpiled.sourceMapText
+      });
+    }
+    else {
+      if (versionCheck) {
+        var babelVersion = transpiler.version;
+        if (babelVersion.split('.')[0] &gt; 5)
+          console.log('Warning - using Babel ' + babelVersion + '. This version of SystemJS builder is designed to run against Babel
+ 5.');
+        versionCheck = false;
+      }
+
+      var options = extend({}, loader.babelOptions || {});
+      options.modules = 'system';
+      if (opts.sourceMaps)
+        options.sourceMap = true;
+      if (load.metadata.sourceMap)
+        options.inputSourceMap = load.metadata. ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+return { names: names, indices: indices };
+}
+
+// converts anonymous AMDs into named AMD for the module
+exports.compile = function (load, opts, loader) {
+opts.moduleId = !opts.anonymous &amp;&amp; load.name;
+return compiler.<span class="apidocCodeKeywordSpan">compile</span>(load, opts, [require('babel-plugin-transform-amd-system-
+wrapper').default, {
+  anonNamed: load.metadata.anonNamed,
+  map: function (dep) {
+    return opts.normalize ? load.depMap[dep] : dep;
+  },
+  systemGlobal: opts.systemGlobal,
+	  deps: load.deps
+}]);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.esm.remap" id="apidoc.element.systemjs-builder.esm.remap">
+        function <span class="apidocSignatureSpan">systemjs-builder.esm.</span>remap
+        <span class="apidocSignatureSpan">(source, map, fileName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function remap(source, map, fileName) {
+  var compiler = new traceur.Compiler();
+
+  var tree = compiler.parse(source, fileName);
+
+  tree = new TraceurImportNormalizeTransformer(map).transformAny(tree);
+
+  return Promise.resolve({
+    source: compiler.write(tree)
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.systemjs-builder.global" id="apidoc.module.systemjs-builder.global">module systemjs-builder.global</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.global.compile" id="apidoc.element.systemjs-builder.global.compile">
+        function <span class="apidocSignatureSpan">systemjs-builder.global.</span>compile
+        <span class="apidocSignatureSpan">(load, opts, loader)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compile = function (load, opts, loader) {
+  var deps = opts.normalize ? load.deps.map(function(dep) { return load.depMap[dep]; }) : load.deps;
+
+  // send normalized globals into the transformer
+  var normalizedGlobals;
+  if (load.metadata.globals) {
+    normalizedGlobals = {};
+    for (var g in load.metadata.globals)
+      normalizedGlobals[g] = opts.normalize ? load.depMap[load.metadata.globals[g]] : load.metadata.globals[g];
+  }
+
+  return compiler.compile(load, opts, [require('babel-plugin-transform-global-system-wrapper').default, {
+    deps: deps,
+    exportName: load.metadata.exports,
+    globals: normalizedGlobals,
+    moduleName: !opts.anonymous &amp;&amp; load.name,
+    systemGlobal: opts.systemGlobal
+  }]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+return { names: names, indices: indices };
+}
+
+// converts anonymous AMDs into named AMD for the module
+exports.compile = function (load, opts, loader) {
+opts.moduleId = !opts.anonymous &amp;&amp; load.name;
+return compiler.<span class="apidocCodeKeywordSpan">compile</span>(load, opts, [require('babel-plugin-transform-amd-system-
+wrapper').default, {
+  anonNamed: load.metadata.anonNamed,
+  map: function (dep) {
+    return opts.normalize ? load.depMap[dep] : dep;
+  },
+  systemGlobal: opts.systemGlobal,
+	  deps: load.deps
+}]);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.global.sfx" id="apidoc.element.systemjs-builder.global.sfx">
+        function <span class="apidocSignatureSpan">systemjs-builder.global.</span>sfx
+        <span class="apidocSignatureSpan">(loader)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sfx = function (loader) {
+  return require('fs').readFileSync(require('path').resolve(__dirname, '../templates/global-helpers.min.js')).toString();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// include compiler helpers at the beginning of outputs
+Object.keys(compilerMap).forEach(function(format) {
+  if (!compilers[format])
+    return;
+  var compiler = require(compilerMap[format]);
+  if (compiler.sfx)
+    outputs.unshift(compiler.<span class="apidocCodeKeywordSpan">sfx</span>(loader));
+});
+
+// determine if the SFX bundle has any external dependencies it relies on
+var globalDeps = [];
+modules.forEach(function(name) {
+  var load = tree[name];
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.systemjs-builder.json" id="apidoc.module.systemjs-builder.json">module systemjs-builder.json</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.json.compile" id="apidoc.element.systemjs-builder.json.compile">
+        function <span class="apidocSignatureSpan">systemjs-builder.json.</span>compile
+        <span class="apidocSignatureSpan">(load, opts, loader)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compile = function (load, opts, loader) {
+  try {
+    var json = JSON.parse(load.source)
+  }
+  catch(e) {
+    throw new Error('Unable to parse JSON module ' + load.name + ' contents as JSON.');
+  }
+
+  if (load.isPackageConfig)
+    json = optimizePackageConfig(json);
+
+  return Promise.resolve({
+    source: opts.systemGlobal + '.registerDynamic(' + (opts.anonymous ? '' : '"' + load.name + '", ') + '[], true, function() {\
+n' +
+            '  return ' + JSON.stringify(json, null, 2).replace(/\n/g, '\n  ') + ';\n' +
+            '});\n'
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+return { names: names, indices: indices };
+}
+
+// converts anonymous AMDs into named AMD for the module
+exports.compile = function (load, opts, loader) {
+opts.moduleId = !opts.anonymous &amp;&amp; load.name;
+return compiler.<span class="apidocCodeKeywordSpan">compile</span>(load, opts, [require('babel-plugin-transform-amd-system-
+wrapper').default, {
+  anonNamed: load.metadata.anonNamed,
+  map: function (dep) {
+    return opts.normalize ? load.depMap[dep] : dep;
+  },
+  systemGlobal: opts.systemGlobal,
+	  deps: load.deps
+}]);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.systemjs-builder.output" id="apidoc.module.systemjs-builder.output">module systemjs-builder.output</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.output.inlineSourceMap" id="apidoc.element.systemjs-builder.output.inlineSourceMap">
+        function <span class="apidocSignatureSpan">systemjs-builder.output.</span>inlineSourceMap
+        <span class="apidocSignatureSpan">(source, sourceMap)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function inlineSourceMap(source, sourceMap) {
+  if (!sourceMap)
+    throw new Error('NOTHING TO INLINE');
+  return source + '\n//# sourceMappingURL=data:application/json;base64,'
+      + new Buffer(sourceMap.toString()).toString('base64');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.output.writeOutputs" id="apidoc.element.systemjs-builder.output.writeOutputs">
+        function <span class="apidocSignatureSpan">systemjs-builder.output.</span>writeOutputs
+        <span class="apidocSignatureSpan">(outputs, baseURL, outputOpts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeOutputs = function (outputs, baseURL, outputOpts) {
+  var outFile = outputOpts.outFile &amp;&amp; path.resolve(outputOpts.outFile);
+  var basePath = fromFileURL(baseURL);
+  var fileName = outFile &amp;&amp; path.basename(outFile) || 'output.js';
+
+  var output = createOutput(outFile || path.resolve(basePath, fileName), outputs, basePath, outputOpts.sourceMaps, outputOpts.sourceMapContents
+);
+	
+  if (outputOpts.minify)
+    output = minify(output, fileName, outputOpts.mangle, outputOpts.uglify);
+
+  if (outputOpts.sourceMaps == 'inline') {
+    output.source = inlineSourceMap(output.source, output.sourceMap);
+    output.sourceMap = undefined;
+  }
+
+  if (!outputOpts.outFile)
+    return Promise.resolve(output);
+
+  return writeOutputFile(outFile, output.source, output.sourceMap).then(function() {
+    return output;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.systemjs-builder.register" id="apidoc.module.systemjs-builder.register">module systemjs-builder.register</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.register.compile" id="apidoc.element.systemjs-builder.register.compile">
+        function <span class="apidocSignatureSpan">systemjs-builder.register.</span>compile
+        <span class="apidocSignatureSpan">(load, opts, loader)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compile = function (load, opts, loader) {
+  return compiler.compile(load, opts, [require('babel-plugin-transform-system-register').default, {
+    moduleName: !opts.anonymous &amp;&amp; load.name,
+    map: function (dep) {
+      return opts.normalize ? load.depMap[dep] : dep;
+    },
+    systemGlobal: opts.systemGlobal
+  }]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+return { names: names, indices: indices };
+}
+
+// converts anonymous AMDs into named AMD for the module
+exports.compile = function (load, opts, loader) {
+opts.moduleId = !opts.anonymous &amp;&amp; load.name;
+return compiler.<span class="apidocCodeKeywordSpan">compile</span>(load, opts, [require('babel-plugin-transform-amd-system-
+wrapper').default, {
+  anonNamed: load.metadata.anonNamed,
+  map: function (dep) {
+    return opts.normalize ? load.depMap[dep] : dep;
+  },
+  systemGlobal: opts.systemGlobal,
+	  deps: load.deps
+}]);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.systemjs-builder.sourcemaps" id="apidoc.module.systemjs-builder.sourcemaps">module systemjs-builder.sourcemaps</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.sourcemaps.concatenateSourceMaps" id="apidoc.element.systemjs-builder.sourcemaps.concatenateSourceMaps">
+        function <span class="apidocSignatureSpan">systemjs-builder.sourcemaps.</span>concatenateSourceMaps
+        <span class="apidocSignatureSpan">(outFile, mapsWithOffsets, basePath, sourceMapContents)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">concatenateSourceMaps = function (outFile, mapsWithOffsets, basePath, sourceMapContents) {
+  var generated = new sourceMap.SourceMapGenerator({
+    file: path.basename(outFile)
+  });
+
+  var outPath = path.dirname(outFile);
+
+  var contentsBySource = sourceMapContents ? {} : null;
+
+  mapsWithOffsets.forEach(function(pair) {
+    var offset = pair[0];
+    var map = getMapObject(pair[1]);
+
+    if (sourceMapContents &amp;&amp; map.sourcesContent) {
+      for (var i=0; i&lt;map.sources.length; i++) {
+        var source = (map.sourceRoot || '') + map.sources[i];
+        if (!source.match(/\/@traceur/)) {
+          if (!contentsBySource[source]) {
+            contentsBySource[source] = map.sourcesContent[i];
+          } else {
+            if (contentsBySource[source] != map.sourcesContent[i]) {
+              throw new Error("Mismatched sourcesContent for: " + source);
+            }
+          }
+        }
+      }
+    }
+
+    wrapSourceMap(map).eachMapping(function(mapping) {
+      if (mapping.originalLine == null || mapping.originalColumn == null || !mapping.source || mapping.source.match(/(\/|^)@traceur
+/))
+        return;
+
+      generated.addMapping({
+        generated: {
+          line: offset + mapping.generatedLine,
+          column: mapping.generatedColumn
+        },
+        original: {
+          line: mapping.originalLine,
+          column: mapping.originalColumn
+        },
+        source: mapping.source,
+        name: mapping.name
+      });
+    });
+  });
+
+  // normalize source paths and inject sourcesContent if necessary
+  var normalized = JSON.parse(JSON.stringify(generated));
+
+  if (sourceMapContents) {
+    normalized.sourcesContent = normalized.sources.map(function(source) {
+      if (contentsBySource[source])
+        return contentsBySource[source];
+
+      try {
+        return fs.readFileSync(path.resolve(basePath, source)).toString();
+      }
+      catch (e) {
+        return "";
+      }
+    });
+  }
+
+  normalized.sources = normalized.sources.map(function(source) {
+    if (isFileURL(source))
+      source = fromFileURL(source);
+
+    return path.relative(outPath, path.resolve(basePath, source)).replace(/\\/g, '/');
+  });
+
+  return JSON.stringify(normalized);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.sourcemaps.removeSourceMaps" id="apidoc.element.systemjs-builder.sourcemaps.removeSourceMaps">
+        function <span class="apidocSignatureSpan">systemjs-builder.sourcemaps.</span>removeSourceMaps
+        <span class="apidocSignatureSpan">(source)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeSourceMaps = function (source) {
+  return source.replace(sourceMapRegEx, '');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.systemjs-builder.trace" id="apidoc.module.systemjs-builder.trace">module systemjs-builder.trace</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.trace.trace" id="apidoc.element.systemjs-builder.trace.trace">
+        function <span class="apidocSignatureSpan">systemjs-builder.</span>trace
+        <span class="apidocSignatureSpan">(loader, traceCache)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Trace(loader, traceCache) {
+  // when creating a new trace, we by default invalidate the freshness of the trace cache
+  Object.keys(traceCache).forEach(function(canonical) {
+    var load = traceCache[canonical];
+
+    if (load &amp;&amp; !load.conditional)
+      load.fresh = false;
+  });
+
+
+  this.loader = loader;
+  // stored traced load records
+  this.loads = traceCache || {};
+  // in progress traces
+  this.tracing = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```javascript
+var Builder = require('systemjs-builder');
+
+var builder = new Builder({
+// ...
+});
+
+Promise.all([builder.<span class="apidocCodeKeywordSpan">trace</span>('app/first.js'), builder.trace('app/second.
+js')])
+.then(function(trees) {
+var commonTree = builder.intersectTrees(trees[0], trees[1]);
+return Promise.all([
+  builder.bundle(commonTree, 'shared-bundle.js'),
+  builder.bundle(builder.subtractTrees(trees[0], commonTree), 'first-bundle.js'),
+  builder.bundle(builder.subtractTrees(trees[1], commonTree), 'second-bundle.js')
+]);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.trace.getConditionalEnv" id="apidoc.element.systemjs-builder.trace.getConditionalEnv">
+        function <span class="apidocSignatureSpan">systemjs-builder.trace.</span>getConditionalEnv
+        <span class="apidocSignatureSpan">(builder, loads, traceOpts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getConditionalEnv = function (builder, loads, traceOpts) {
+  var conditionalEnvVariations = {};
+
+  Object.keys(loads).forEach(function(canonical) {
+    var load = loads[canonical];
+    if (!load.conditional)
+      return;
+
+    var envVariations = Trace.getConditionalResolutions(load.conditional, traceOpts.conditions, traceOpts.inlineConditions).conditionalEnvVariations
+;
+
+    Object.keys(envVariations).forEach(function(condition) {
+      if (envVariations[condition] instanceof Array) {
+        conditionalEnvVariations[condition] = conditionalEnvVariations[condition] || [];
+        envVariations[condition].forEach(function(conditionValue) {
+          if (conditionalEnvVariations[condition].indexOf(conditionValue) === -1)
+            conditionalEnvVariations[condition].push(conditionValue);
+        });
+      }
+      else {
+        conditionalEnvVariations[condition] = conditionalEnvVariations[condition] || envVariations[condition];
+      }
+    });
+  });
+  return conditionalEnvVariations;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.trace.getConditionalResolutions" id="apidoc.element.systemjs-builder.trace.getConditionalResolutions">
+        function <span class="apidocSignatureSpan">systemjs-builder.trace.</span>getConditionalResolutions
+        <span class="apidocSignatureSpan">(conditional, conditionalEnv, inlineConditionals)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getConditionalResolutions = function (conditional, conditionalEnv, inlineConditionals) {
+  // flatten all conditions into a filtered array of condition, module branches
+  var branches = [];
+  var conditionModules = [];
+  var conditionalEnvVariations = {};
+
+  function traceCondition(condition, value) {
+    var conditionModule = parseCondition(condition).module;
+
+    if (inlineConditionals[condition])
+      return inlineConditionals[condition][0] === value;
+
+    if (conditionalEnv[condition] &amp;&amp; conditionalEnv[condition].indexOf(value) === -1)
+      return false;
+
+    conditionalEnvVariations[condition] = conditionalEnvVariations[condition] || [];
+    if (conditionalEnvVariations[condition].indexOf(value) === -1)
+      conditionalEnvVariations[condition].push(value);
+
+    if (conditionModules.indexOf(conditionModule) == -1)
+      conditionModules.push(conditionModule);
+
+    return true;
+  }
+
+  // whether or not to include condition branch given our conditionalEnv
+  function booleanEnvTrace(condition) {
+    var conditionObj = parseCondition(condition);
+
+    if (conditionObj.negate)
+      return traceCondition(conditionalComplement(condition), false);
+    else
+      return traceCondition(condition, true);
+  }
+
+  // { condition, branch } boolean conditional
+  if (conditional.branch) {
+    branches.push(booleanEnvTrace(conditional.condition) ? conditional.branch: '@empty');
+  }
+
+  // { envs: [{condition, branch},...], fallback } package environment map
+  else if (conditional.envs) {
+    var doFallback = true;
+    conditional.envs.forEach(function(env) {
+      if (doFallback &amp;&amp; booleanEnvTrace(env.condition))
+        branches.push(env.branch);
+
+      // if we're specifically not tracing the negative of this condition
+      // then we stop the fallback branch from building
+      if (!booleanEnvTrace(conditionalComplement(env.condition)))
+        doFallback = false;
+    });
+    if (doFallback &amp;&amp; conditional.fallback)
+      branches.push(conditional.fallback);
+  }
+
+  // { condition, branches } conditional interpolation
+  else if (conditional.branches) {
+    Object.keys(conditional.branches).forEach(function(branch) {
+      if (traceCondition(conditional.condition, branch))
+        branches.push(conditional.branches[branch]);
+    });
+  }
+
+  return {
+    branches: branches,
+    conditionModules: conditionModules,
+    conditionalEnvVariations: conditionalEnvVariations
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var conditionalEnvVariations = {};
+
+  Object.keys(loads).forEach(function(canonical) {
+var load = loads[canonical];
+if (!load.conditional)
+  return;
+
+var envVariations = Trace.<span class="apidocCodeKeywordSpan">getConditionalResolutions</span>(load.conditional, traceOpts.conditions
+, traceOpts.inlineConditions).conditionalEnvVariations;
+
+Object.keys(envVariations).forEach(function(condition) {
+  if (envVariations[condition] instanceof Array) {
+    conditionalEnvVariations[condition] = conditionalEnvVariations[condition] || [];
+    envVariations[condition].forEach(function(conditionValue) {
+      if (conditionalEnvVariations[condition].indexOf(conditionValue) === -1)
+        conditionalEnvVariations[condition].push(conditionValue);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.trace.getLoadDependencies" id="apidoc.element.systemjs-builder.trace.getLoadDependencies">
+        function <span class="apidocSignatureSpan">systemjs-builder.trace.</span>getLoadDependencies
+        <span class="apidocSignatureSpan">(load, traceOpts, canonicalConditionalEnv, canonicalInlineConditionals)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getLoadDependencies = function (load, traceOpts, canonicalConditionalEnv, canonicalInlineConditionals) {
+  canonicalConditionalEnv = canonicalConditionalEnv || {};
+
+  var deps = [];
+
+  // conditional load records have their branches all included in the trace
+  if (load.conditional) {
+    var resolutions = Trace.getConditionalResolutions(load.conditional, canonicalConditionalEnv, canonicalInlineConditionals);
+
+    if (traceOpts.tracePackageConfig &amp;&amp; load.packageConfig)
+      deps.push(load.packageConfig);
+
+    resolutions.conditionModules.forEach(function(conditionModule) {
+      if (deps.indexOf(conditionModule) == -1)
+        deps.push(conditionModule);
+    });
+
+    return deps.concat(resolutions.branches);
+  }
+
+  // trace the plugin as a dependency
+  if (traceOpts.traceRuntimePlugin &amp;&amp; load.runtimePlugin)
+    deps.push(load.plugin);
+
+  // plugins by syntax build in their config
+  if (traceOpts.tracePackageConfig &amp;&amp; load.pluginConfig)
+    deps.push(load.pluginConfig);
+
+  // add the dependencies
+  load.deps.forEach(function(dep) {
+    deps.push(load.depMap[dep]);
+  });
+
+  // trace the package config if necessary
+  if (traceOpts.tracePackageConfig &amp;&amp; load.packageConfig)
+    deps.push(load.packageConfig);
+
+  return deps;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // (that is, part of depcache, but not built)
+  // we skip system modules though
+  if (systemModules.indexOf(canonical) == -1)
+    curLoads[canonical] = load;
+
+  if (load) {
+    parentStack = parentStack.concat([canonical]);
+    return Promise.all(Trace.<span class="apidocCodeKeywordSpan">getLoadDependencies</span>(load, traceOpts, canonicalConditionalEnv
+, canonicalInlineConditionals).map(function(dep) {
+      return self.getAllLoadRecords(dep, traceOpts, canonicalConditionalEnv, canonicalInlineConditionals, curLoads, parentStack);
+    }));
+  }
+})
+.then(function() {
+  return curLoads;
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.trace.toCanonicalConditionalEnv" id="apidoc.element.systemjs-builder.trace.toCanonicalConditionalEnv">
+        function <span class="apidocSignatureSpan">systemjs-builder.trace.</span>toCanonicalConditionalEnv
+        <span class="apidocSignatureSpan">(loader, conditionalEnv)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toCanonicalConditionalEnv(loader, conditionalEnv) {
+  var canonicalConditionalEnv = {};
+
+  // convert boolean conditions of the form
+  // @system-env|browser: [true, false]
+  // @system-env|~browser: true
+  // into just:
+  // @system-env|browser: [true, false]
+  // to be deprecated in due course
+  Object.keys(conditionalEnv).map(function(m) {
+    var conditionObj = parseCondition(m);
+
+    if (!(conditionalEnv[m] instanceof Array)) {
+      if (!conditionObj.negate) {
+        conditionalEnv[m] = [conditionalEnv[m]];
+      }
+      else {
+        var complement = conditionalComplement(m);
+        if (conditionalEnv[complement]) {
+          if (conditionalEnv[complement] instanceof Array) {
+            if (conditionalEnv[complement].indexOf(!conditionalEnv[m]) === -1)
+              conditionalEnv[complement].push(!conditionalEnv[m]);
+          }
+          else {
+            if (!conditionalEnv[m] !== conditionalEnv[complement])
+              conditionalEnv[conditionalComplement(m)] = [conditionalEnv[conditionalComplement(m)], !conditionalEnv[m]];
+          }
+        }
+        else {
+          conditionalEnv[conditionalComplement(m)] = [!conditionalEnv[m]];
+        }
+        delete conditionalEnv[m];
+      }
+    }
+  });
+
+  return Promise.all(Object.keys(conditionalEnv).map(function(m) {
+    var conditionObj = parseCondition(m);
+    return loader.normalize(conditionObj.module)
+    .then(function(normalized) {
+      conditionObj.module = getCanonicalName(loader, normalized);
+      var canonicalCondition = serializeCondition(conditionObj);
+      canonicalConditionalEnv[canonicalCondition] = conditionalEnv[m];
+    });
+  }))
+  .then(function() {
+    return canonicalConditionalEnv;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.systemjs-builder.trace.prototype" id="apidoc.module.systemjs-builder.trace.prototype">module systemjs-builder.trace.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.trace.prototype.getAllLoadRecords" id="apidoc.element.systemjs-builder.trace.prototype.getAllLoadRecords">
+        function <span class="apidocSignatureSpan">systemjs-builder.trace.prototype.</span>getAllLoadRecords
+        <span class="apidocSignatureSpan">(canonical, traceOpts, canonicalConditionalEnv, canonicalInlineConditionals, curLoads, parentStack)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAllLoadRecords = function (canonical, traceOpts, canonicalConditionalEnv, canonicalInlineConditionals, curLoads, parentStack) {
+  var loader = this.loader;
+
+  curLoads = curLoads || {};
+
+  if (canonical in curLoads)
+    return curLoads;
+
+  var self = this;
+  return this.getLoadRecord(canonical, traceOpts, parentStack)
+  .then(function(load) {
+
+    // check this again â€“ might have been loaded asynchronously since the last check
+    if (canonical in curLoads)
+      return curLoads;
+
+    // conditionals, build: false and system modules are falsy loads in the trace trees
+    // (that is, part of depcache, but not built)
+    // we skip system modules though
+    if (systemModules.indexOf(canonical) == -1)
+      curLoads[canonical] = load;
+
+    if (load) {
+      parentStack = parentStack.concat([canonical]);
+      return Promise.all(Trace.getLoadDependencies(load, traceOpts, canonicalConditionalEnv, canonicalInlineConditionals).map(function
+(dep) {
+        return self.getAllLoadRecords(dep, traceOpts, canonicalConditionalEnv, canonicalInlineConditionals, curLoads, parentStack
+);
+      }));
+    }
+  })
+  .then(function() {
+    return curLoads;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  });
+  return conditionalEnvVariations;
+};
+
+Trace.prototype.traceCanonical = function(canonical, traceOpts) {
+  var self = this;
+
+  return self.<span class="apidocCodeKeywordSpan">getAllLoadRecords</span>(canonical, traceOpts, traceOpts.conditions, traceOpts
+.inlineConditions, {}, [])
+  .then(function(loads) {
+// if it is a bundle, we just use a regex to extract the list of loads
+// as "true" records for subtraction arithmetic use only
+var thisLoad = loads[canonical];
+
+if (thisLoad &amp;&amp; !thisLoad.conditional &amp;&amp; thisLoad.metadata.bundle) {
+  namedRegisterRegEx.lastIndex = 0;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.trace.prototype.getLoadRecord" id="apidoc.element.systemjs-builder.trace.prototype.getLoadRecord">
+        function <span class="apidocSignatureSpan">systemjs-builder.trace.prototype.</span>getLoadRecord
+        <span class="apidocSignatureSpan">(canonical, traceOpts, parentStack)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getLoadRecord = function (canonical, traceOpts, parentStack) {
+  var loader = this.loader;
+  var loads = this.loads;
+
+  if (isLoadFresh(loads[canonical], loader, loads))
+    return Promise.resolve(loads[canonical]);
+
+  if (this.tracing[canonical])
+    return this.tracing[canonical];
+
+  var self = this;
+  var isPackageConditional = canonical.indexOf('/#:') != -1;
+
+  var curMap = loader.map;
+  loader.map = {};
+  var normalized = loader.decanonicalize(canonical);
+  loader.map = curMap;
+
+  return this.tracing[canonical] = Promise.resolve(normalized)
+  .then(function(normalized) {
+    // modules already set in the registry are system modules
+    if (loader.has(normalized))
+      return false;
+
+    // package conditional fallback normalization
+    if (!isPackageConditional)
+      normalized = normalized.replace('/#:', '/');
+
+    // -- conditional load record creation: sourceless intermediate load record --
+
+    // boolean conditional
+    var booleanIndex = canonical.lastIndexOf('#?');
+    if (booleanIndex != -1) {
+      var condition = canonical.substr(booleanIndex + 2);
+      if (condition.indexOf('|') == -1)
+        condition += '|default';
+      return {
+        name: canonical,
+        fresh: true,
+        conditional: {
+          condition: condition,
+          branch: canonical.substr(0, booleanIndex)
+        }
+      };
+    }
+
+    // package environment conditional
+    var pkgEnvIndex = canonical.indexOf('/#:');
+    if (pkgEnvIndex != -1) {
+      // NB handle a package plugin load here too
+      if (canonical.indexOf('!') != -1)
+        throw new Error('Unable to trace ' + canonical + ' - building package environment mappings of plugins is not currently supported
+.');
+
+      var pkgName = canonical.substr(0, pkgEnvIndex);
+      var subPath = canonical.substr(pkgEnvIndex + 3);
+
+      var normalizedPkgName = loader.decanonicalize(pkgName);
+
+      // record package config paths
+      var loadPackageConfig;
+      var packageConfigPath = getPackageConfigPath(loader.packageConfigPaths, normalizedPkgName);
+      if (packageConfigPath) {
+        loadPackageConfig = getCanonicalName(loader, packageConfigPath);
+        (loader.meta[packageConfigPath] = loader.meta[packageConfigPath] || {}).format = 'json';
+      }
+
+      // effective analog of the same function in SystemJS packages.js
+      // to work out the path with defaultExtension added.
+      // we cheat here and use normalizeSync to apply the right checks, while
+      // skipping any map entry by temporarily removing it.
+      var absURLRegEx = /^[^\/]+:\/\//;
+      function isPlain(name) {
+        return name[0] != '.' &amp;&amp; name[0] != '/' &amp;&amp; !name.match(absURLRegEx);
+      }
+      function getMapMatch(map, name) {
+        var bestMatch, bestMatchLength = 0;
+
+        for (var p in map) {
+          if (name.substr(0, p.length) == p &amp;&amp; (name.length == p.length || name[p.length] == '/')) {
+            var curMatchLength = p.split('/').length;
+            if (curMatchLength &lt;= bestMatchLength)
+              continue;
+            bestMatch = p;
+            bestMatchLength = curMatchLength;
+          }
+        }
+
+        return bestMatch;
+      }
+      function toPackagePath(subPath, isFallback) {
+        if (isPlain(subPath)) {
+          // plain name -&gt; apply map
+          if (!isFallback)
+            return loader.normalize(subPath, normalizedPkgName + '/');
+          // if a fallback conditional map, only do global map, not package map
+          else
+            return loader.normalize(subPath);
+        }
+        else if (subPath == '.') {
+          return Promise.resolve(normalizedPkgName);
+        }
+        else if (subPath.substr(0, 2) == './') {
+          var pkgMap = pkg.map;
+          pkg.map = {};
+          var normalized = loader.normalizeSync(pkgName + '/' + subPath.substr(2));
+          pkg.map = pkgMap;
+          return Promise.resolve(normalized);
+        }
+        else {
+          return Promise.resolve(normalized);
+        }
+      }
+
+      var pkg
+      var envMap;
+      var metadata = {};
+
+      // ensure we have loaded any package config first
+      // NB this does not properly ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function getTreeModuleOperation(builder, symbol, traceOpts) {
+if (symbol == '+')
+  return function(tree, canonical) {
+    var addedTree = {};
+    for (var p in tree)
+      addedTree[p] = tree[p];
+
+    return builder.tracer.<span class="apidocCodeKeywordSpan">getLoadRecord</span>(canonical, traceOpts).then(function(load) {
+      addedTree[canonical] = load;
+      return addedTree;
+    });
+  };
+else if (symbol == '-')
+  return function(tree, canonical) {
+    var subtractedTree = {};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.trace.prototype.inlineConditions" id="apidoc.element.systemjs-builder.trace.prototype.inlineConditions">
+        function <span class="apidocSignatureSpan">systemjs-builder.trace.prototype.</span>inlineConditions
+        <span class="apidocSignatureSpan">(tree, loader, traceOpts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inlineConditions = function (tree, loader, traceOpts) {
+  var self = this;
+
+  var inconsistencyErrorMsg = 'For static condition inlining only an exact environment resolution can be built, pending https://
+github.com/systemjs/builder/issues/311.';
+
+  // ensure we have no condition conflicts
+  for (var c in traceOpts.inlineConditions) {
+    if (traceOpts.inlineConditions[c].length &gt; 1)
+      throw new TypeError('Error building condition ' + c + '. ' + inconsistencyErrorMsg);
+  }
+
+  var conditionalResolutions = {};
+  var importsSystemEnv = false;
+
+  // get the list of all conditional dependencies in the tree
+  var allConditionals = [];
+  Object.keys(tree).forEach(function(m) {
+    if (m.match(/#[\:\?\{]/) &amp;&amp; allConditionals.indexOf(m) === -1)
+      allConditionals.push(m);
+
+    if (!tree[m] || tree[m].conditional)
+      return;
+
+    Object.keys(tree[m].depMap).forEach(function(d) {
+      var dep = tree[m].depMap[d];
+
+      if (dep.match(/#[\:\?\{]/) &amp;&amp; allConditionals.indexOf(dep) === -1)
+        allConditionals.push(dep);
+    });
+  });
+
+  // determine the conditional resolutions
+  return Promise.all(allConditionals.map(function(c) {
+    return self.getLoadRecord(c, traceOpts)
+    .then(function(load) {
+      var branches = Trace.getConditionalResolutions(load.conditional, traceOpts.conditions, traceOpts.inlineConditions).branches
+;
+
+      if (branches.length === 1)
+        conditionalResolutions[c] = branches[0];
+    });
+  }))
+  .then(function() {
+    // resolve any chained conditionals
+    Object.keys(conditionalResolutions).forEach(function(c) {
+      var resolution = conditionalResolutions[c];
+
+      var seen = [];
+      while (conditionalResolutions[resolution] &amp;&amp; seen.indexOf(resolution) == -1) {
+        seen.push(resolution);
+        resolution = conditionalResolutions[resolution];
+        conditionalResolutions[c] = resolution;
+      }
+      if (seen.indexOf(resolution) != -1)
+        throw new Error('Circular conditional resolution ' + seen.join(' -&gt; ') + ' -&gt; ' + resolution);
+    });
+
+    // finally we do a deep clone of the tree, applying the conditional resolutions as we go
+    // if we have a dependency on a condition not in the tree, we throw as it would be an unresolved external
+    var inlinedTree = {};
+    Object.keys(tree).forEach(function(m) {
+      var load = tree[m];
+
+      if (typeof load == 'boolean') {
+        inlinedTree[m] = load;
+        return;
+      }
+
+      if (load.conditional)
+        return;
+
+      var clonedLoad = extend({}, load);
+      clonedLoad.depMap = {};
+      Object.keys(load.depMap).forEach(function(d) {
+        var normalizedDep = load.depMap[d];
+
+        normalizedDep = conditionalResolutions[normalizedDep] || normalizedDep;
+
+        if (normalizedDep == '@system-env')
+          importsSystemEnv = true;
+
+        clonedLoad.depMap[d] = normalizedDep;
+      });
+
+      inlinedTree[m] = clonedLoad;
+    });
+
+    // if we explicitly import from the system environment, then we need to build it into a static build
+    // this is normally excluded as it is a system module in SystemJS but won't be available in static
+    // builds which is exactly what this function acts on
+    if (importsSystemEnv) {
+      inlinedTree['@system-env'] = {
+        name: '@system-env',
+        path: null,
+        metadata: {
+          format: 'json'
+        },
+        deps: [],
+        depMap: {},
+        source: JSON.stringify({
+          production: traceOpts.inlineConditions['@system-env|production'],
+          browser: traceOpts.inlineConditions['@system-env|browser'],
+          node: traceOpts.inlineConditions['@system-env|node'],
+          dev: traceOpts.inlineConditions['@system-env|dev'],
+          default: true
+        }),
+        fresh: true,
+        timestamp: null,
+        configHash: loader.configHash,
+      };
+    }
+
+    return inlinedTree;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.trace.prototype.traceCanonical" id="apidoc.element.systemjs-builder.trace.prototype.traceCanonical">
+        function <span class="apidocSignatureSpan">systemjs-builder.trace.prototype.</span>traceCanonical
+        <span class="apidocSignatureSpan">(canonical, traceOpts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">traceCanonical = function (canonical, traceOpts) {
+  var self = this;
+
+  return self.getAllLoadRecords(canonical, traceOpts, traceOpts.conditions, traceOpts.inlineConditions, {}, [])
+  .then(function(loads) {
+    // if it is a bundle, we just use a regex to extract the list of loads
+    // as "true" records for subtraction arithmetic use only
+    var thisLoad = loads[canonical];
+
+    if (thisLoad &amp;&amp; !thisLoad.conditional &amp;&amp; thisLoad.metadata.bundle) {
+      namedRegisterRegEx.lastIndex = 0;
+      var curMatch;
+      while ((curMatch = namedRegisterRegEx.exec(thisLoad.source)))
+        loads[curMatch[3].substr(1, curMatch[3].length - 2)] = true;
+    }
+
+    return {
+      moduleName: canonical,
+      tree: loads
+    };
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+          if (op.operationsTree){
+            return processExpandedOperations(op.operationsTree).then(function(expandedTree){
+              return getTreeOperation(op.operator)(curTree, expandedTree);
+            });
+          }
+          // tree . tree
+          return builder.tracer.<span class="apidocCodeKeywordSpan">traceCanonical</span>(op.moduleName, traceOpts)
+          .then(function(nextTrace) {
+            return getTreeOperation(op.operator)(curTree, nextTrace.tree);
+          });
+        });
+      }, Promise.resolve({}));
+  });
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.trace.prototype.traceModule" id="apidoc.element.systemjs-builder.trace.prototype.traceModule">
+        function <span class="apidocSignatureSpan">systemjs-builder.trace.prototype.</span>traceModule
+        <span class="apidocSignatureSpan">(moduleName, traceOpts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">traceModule = function (moduleName, traceOpts) {
+  var loader = this.loader;
+
+  return Promise.resolve(loader.normalize(moduleName))
+  .then(function(normalized) {
+    return traceCanonical(getCanonicalName(loader, normalized), traceOpts);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.systemjs-builder.utils" id="apidoc.module.systemjs-builder.utils">module systemjs-builder.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.utils.dextend" id="apidoc.element.systemjs-builder.utils.dextend">
+        function <span class="apidocSignatureSpan">systemjs-builder.utils.</span>dextend
+        <span class="apidocSignatureSpan">(a, b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dextend(a, b) {
+  for (var p in b) {
+    if (!b.hasOwnProperty(p))
+      continue;
+    var val = b[p];
+    if (typeof val === 'object')
+      dextend(a[p] = typeof a[p] === 'object' ? a[p] : {}, val);
+    else
+      a[p] = val;
+  }
+  return a;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.utils.extend" id="apidoc.element.systemjs-builder.utils.extend">
+        function <span class="apidocSignatureSpan">systemjs-builder.utils.</span>extend
+        <span class="apidocSignatureSpan">(a, b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function extend(a, b) {
+  for (var p in b)
+    a[p] = b[p];
+  return a;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.utils.fromFileURL" id="apidoc.element.systemjs-builder.utils.fromFileURL">
+        function <span class="apidocSignatureSpan">systemjs-builder.utils.</span>fromFileURL
+        <span class="apidocSignatureSpan">(url)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function fromFileURL(url) {
+  return url.substr(7 + !!isWin).replace(/\//g, path.sep);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.utils.getAlias" id="apidoc.element.systemjs-builder.utils.getAlias">
+        function <span class="apidocSignatureSpan">systemjs-builder.utils.</span>getAlias
+        <span class="apidocSignatureSpan">(loader, canonicalName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getAlias(loader, canonicalName) {
+  var pluginIndex = loader.pluginFirst ? canonicalName.indexOf('!') : canonicalName.lastIndexOf('!');
+  if (pluginIndex != -1)
+    return getAlias(loader, canonicalName.substr(0, pluginIndex)) + '!' + getAlias(loader, canonicalName.substr(pluginIndex + 1));
+
+  // replace subpath conditionals with subpath
+  canonicalName = canonicalName.replace('/#:./', '/');
+
+  if (canonicalName.match(/\#[\:\{\?]/))
+    throw new Error('Unable to alias the conditional dependency "' + canonicalName + '".');
+
+  var packageName = getPackage(loader.packages, loader.decanonicalize(canonicalName));
+  var packageMain = packageName &amp;&amp; loader.packages[packageName].main;
+  if (packageMain &amp;&amp; canonicalName.substr(canonicalName.length - packageMain.length - 1) == '/' + packageMain)
+    canonicalName = canonicalName.substr(0, canonicalName.length - packageMain.length - 1);
+
+  var bestAliasLength = 0;
+  var bestAliasSubpath;
+  var bestAlias;
+  Object.keys(loader.map).forEach(function(alias) {
+    if (alias.split('/').length &lt;= bestAliasLength)
+      return;
+
+    // get mapped without defaultJSExtension
+    var mapped = getCanonicalName(loader, loader.decanonicalize(loader.map[alias]));
+
+    // do matching with defaultJSExtension checking
+    if (loader.defaultJSExtensions &amp;&amp; canonicalName == mapped + '.js') {
+      bestAlias = alias;
+      bestAliasSubpath = '';
+      bestAliasLength = alias.split('/').length;
+    }
+    else if (canonicalName.substr(0, mapped.length) == mapped &amp;&amp;
+        (canonicalName.length == mapped.length || canonicalName[mapped.length] == '/')) {
+      bestAlias = alias;
+      bestAliasSubpath = canonicalName.substr(mapped.length);
+      bestAliasLength = alias.split('/').length;
+    }
+  });
+
+  if (bestAlias)
+    return bestAlias + bestAliasSubpath;
+
+  return canonicalName;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.utils.getCanonicalName" id="apidoc.element.systemjs-builder.utils.getCanonicalName">
+        function <span class="apidocSignatureSpan">systemjs-builder.utils.</span>getCanonicalName
+        <span class="apidocSignatureSpan">(loader, normalized, isPlugin)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCanonicalName(loader, normalized, isPlugin) {
+  // 1. Boolean conditional
+  var booleanIndex = normalized.lastIndexOf('#?');
+  if (booleanIndex != -1) {
+    var booleanModule = normalized.substr(booleanIndex + 2);
+    var negate = booleanModule[0] == '~';
+    if (negate)
+      booleanModule = booleanModule.substr(1);
+    return getCanonicalName(loader, normalized.substr(0, booleanIndex)) + '#?' + (negate ? '~' : '') + canonicalizeCondition(loader
+, booleanModule);
+  }
+
+  // 2. Plugins
+  var pluginIndex = loader.pluginFirst ? normalized.indexOf('!') : normalized.lastIndexOf('!');
+  if (pluginIndex != -1)
+    return getCanonicalName(loader, normalized.substr(0, pluginIndex), !loader.pluginFirst) + '!' + getCanonicalName(loader, normalized
+.substr(pluginIndex + 1), loader.pluginFirst);
+
+  // 3. Package environment map
+  var pkgEnvIndex = normalized.indexOf('/#:');
+  if (pkgEnvIndex != -1)
+    return getCanonicalName(loader, normalized.substr(0, pkgEnvIndex), isPlugin) + '/#:' + normalized.substr(pkgEnvIndex + 3);
+
+  // Finally get canonical plain
+  var canonical = getCanonicalNamePlain(loader, normalized, isPlugin);
+
+  // 4. Canonicalize conditional interpolation
+  var conditionalMatch = canonical.match(interpolationRegEx);
+  if (conditionalMatch)
+    return getCanonicalNamePlain(loader, normalized, isPlugin).replace(interpolationRegEx, '#{' + canonicalizeCondition(loader,
+conditionalMatch[0].substr(2, conditionalMatch[0].length - 3)) + '}');
+
+  return canonical;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// no glob -&gt; just canonicalize
+if (operation.moduleName.indexOf('*') == -1) {
+  if (operation.canonicalized)
+    return [operation];
+
+  return loader.normalize(operation.moduleName)
+  .then(function(normalized) {
+    operation.moduleName = builder.<span class="apidocCodeKeywordSpan">getCanonicalName</span>(normalized);
+    return [operation];
+  });
+}
+
+// globbing
+var metadata = {};
+var globSuffix = operation.moduleName[operation.moduleName.length - 1] == '*';
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.utils.getFormatHint" id="apidoc.element.systemjs-builder.utils.getFormatHint">
+        function <span class="apidocSignatureSpan">systemjs-builder.utils.</span>getFormatHint
+        <span class="apidocSignatureSpan">(compileOpts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getFormatHint(compileOpts) {
+  var formatHint = '';
+
+  var format = compileOpts.format;
+
+  if (format == 'umd')
+    format = 'amd';
+
+  if (format == 'amd' || format == 'cjs' || format == 'global')
+    formatHint = formatHint + '"format ' + format + '";\n';
+
+  if (compileOpts.format == 'global') {
+    for (var g in compileOpts.globalDeps)
+      formatHint = formatHint + '"globals.' + compileOpts.globalDeps[g] + ' ' + g + '";\n';
+
+    if (compileOpts.globalName)
+      formatHint = formatHint + '"exports ' + compileOpts.globalName + '";\n';
+  }
+
+  return formatHint;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.utils.getPackage" id="apidoc.element.systemjs-builder.utils.getPackage">
+        function <span class="apidocSignatureSpan">systemjs-builder.utils.</span>getPackage
+        <span class="apidocSignatureSpan">(packages, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getPackage(packages, name) {
+  // use most specific package
+  var curPkg, curPkgLen = 0, pkgLen;
+  for (var p in packages) {
+    if (name.substr(0, p.length) === p &amp;&amp; (name.length === p.length || name[p.length] === '/')) {
+      pkgLen = p.split('/').length;
+      if (pkgLen &gt; curPkgLen) {
+        curPkg = p;
+        curPkgLen = pkgLen;
+      }
+    }
+  }
+  return curPkg;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.utils.getPackageConfigPath" id="apidoc.element.systemjs-builder.utils.getPackageConfigPath">
+        function <span class="apidocSignatureSpan">systemjs-builder.utils.</span>getPackageConfigPath
+        <span class="apidocSignatureSpan">(packageConfigPaths, normalized)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getPackageConfigPath(packageConfigPaths, normalized) {
+  var pkgName, exactMatch = false, configPath;
+  for (var i = 0; i &lt; packageConfigPaths.length; i++) {
+    var packageConfigPath = packageConfigPaths[i];
+    var p = packageConfigPaths[packageConfigPath] || (packageConfigPaths[packageConfigPath] = createPkgConfigPathObj(packageConfigPath
+));
+    if (normalized.length &lt; p.length)
+      continue;
+    var match = normalized.match(p.regEx);
+    if (match &amp;&amp; (!pkgName || (!(exactMatch &amp;&amp; p.wildcard) &amp;&amp; pkgName.length &lt; match[1].length))) {
+      pkgName = match[1];
+      exactMatch = !p.wildcard;
+      configPath = pkgName + packageConfigPath.substr(p.length);
+    }
+  }
+
+  if (!pkgName)
+    return;
+
+  // return value is only part modified from SystemJS implementation of getPackageConfigMatch
+  return configPath;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.utils.isPackageConfig" id="apidoc.element.systemjs-builder.utils.isPackageConfig">
+        function <span class="apidocSignatureSpan">systemjs-builder.utils.</span>isPackageConfig
+        <span class="apidocSignatureSpan">(loader, canonical)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isPackageConfig(loader, canonical) {
+  if (loader.configHash != curHash) {
+    configPathCache = null;
+    curHash = loader.configHash;
+  }
+
+  // generate canonical packageConfigPaths for matching
+  if (!configPathCache) {
+    canonicalConfigPaths = loader.packageConfigPaths.map(function(configPath) {
+      return getCanonicalName(loader, configPath);
+    });
+    configPathCache = {};
+  }
+
+  if (canonical in configPathCache)
+    return configPathCache[canonical];
+
+  // check if the given canonical matches the canonical package config paths
+  var cfgPathMatch = getPackageConfigPath(canonicalConfigPaths, canonical);
+  configPathCache[canonical] = cfgPathMatch &amp;&amp; cfgPathMatch.split('/').length == canonical.split('/').length;
+
+  return configPathCache[canonical];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.utils.parseCondition" id="apidoc.element.systemjs-builder.utils.parseCondition">
+        function <span class="apidocSignatureSpan">systemjs-builder.utils.</span>parseCondition
+        <span class="apidocSignatureSpan">(condition)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parseCondition(condition) {
+  var conditionExport, conditionModule, negation;
+
+  var negation = condition[0] == '~';
+  var conditionExportIndex = condition.lastIndexOf('|');
+  if (conditionExportIndex != -1) {
+    conditionExport = condition.substr(conditionExportIndex + 1);
+    conditionModule = condition.substr(negation, conditionExportIndex - negation);
+
+    if (conditionExport[0] == '~') {
+      negation = true;
+      conditionExport = conditionExport.substr(1);
+    }
+  }
+  else {
+    conditionExport = 'default';
+    conditionModule = condition.substr(negation);
+    if (sysConditions.indexOf(conditionModule) != -1) {
+      conditionExport = conditionModule;
+      conditionModule = '@system-env';
+    }
+  }
+
+  return {
+    module: conditionModule,
+    prop: conditionExport,
+    negate: negation
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.utils.serializeCondition" id="apidoc.element.systemjs-builder.utils.serializeCondition">
+        function <span class="apidocSignatureSpan">systemjs-builder.utils.</span>serializeCondition
+        <span class="apidocSignatureSpan">(conditionObj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function serializeCondition(conditionObj) {
+  return conditionObj.module + '|' + (conditionObj.negate ? '~' : '') + conditionObj.prop;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.utils.toFileURL" id="apidoc.element.systemjs-builder.utils.toFileURL">
+        function <span class="apidocSignatureSpan">systemjs-builder.utils.</span>toFileURL
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toFileURL(path) {
+  return 'file://' + (isWin ? '/' : '') + path.replace(/\\/g, '/');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.utils.traceurGet" id="apidoc.element.systemjs-builder.utils.traceurGet">
+        function <span class="apidocSignatureSpan">systemjs-builder.utils.</span>traceurGet
+        <span class="apidocSignatureSpan">(module)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">traceurGet = function (module) {
+  var traceur = require('traceur');
+  var traceurVersion = traceur.loader.NodeTraceurLoader.prototype.version;
+  return $traceurRuntime.ModuleStore.get('traceur@' + traceurVersion + '/src/' + module);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.systemjs-builder.utils.verifyTree" id="apidoc.element.systemjs-builder.utils.verifyTree">
+        function <span class="apidocSignatureSpan">systemjs-builder.utils.</span>verifyTree
+        <span class="apidocSignatureSpan">(tree)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function verifyTree(tree) {
+  if (typeof tree != 'object' || tree instanceof Array)
+    throw new TypeError('Expected a trace tree object');
+
+  Object.keys(tree).forEach(function(key) {
+    var load = tree[key];
+    if (typeof load === 'boolean')
+      return;
+    if (load &amp;&amp; typeof load != 'object' || !load.name || !(load.conditional || load.deps))
+      throw new TypeError('Expected a trace tree object, but "' + key + '" is not a load record.');
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
