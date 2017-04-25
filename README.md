@@ -1,6 +1,6 @@
 # npmdoc-systemjs-builder
 
-#### api documentation for  [systemjs-builder (v0.16.4)](https://github.com/systemjs/builder)  [![npm package](https://img.shields.io/npm/v/npmdoc-systemjs-builder.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-systemjs-builder) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-systemjs-builder.svg)](https://travis-ci.org/npmdoc/node-npmdoc-systemjs-builder)
+#### basic api documentation for  [systemjs-builder (v0.16.4)](https://github.com/systemjs/builder)  [![npm package](https://img.shields.io/npm/v/npmdoc-systemjs-builder.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-systemjs-builder) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-systemjs-builder.svg)](https://travis-ci.org/npmdoc/node-npmdoc-systemjs-builder)
 
 #### SystemJS Build Tool
 
@@ -79,7 +79,8 @@
         "test": "mocha",
         "update-expectations": "UPDATE_EXPECTATIONS=1 mocha"
     },
-    "version": "0.16.4"
+    "version": "0.16.4",
+    "bin": {}
 }
 ```
 
